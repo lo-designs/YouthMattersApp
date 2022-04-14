@@ -37,13 +37,13 @@
         <h1>Resource list: </h1>
         <hr>
 
-        <form action="#" th:action="@{/saveAccountList}" th:object="${userList}" method="POST">
-            <input type="text" th:field="*{name}" placeholder="AccountList Name" class="form-control">
+        <form action="#" th:action="@{/saveResourceList}" th:object="${resourceList}" method="POST">
+            <input type="text" th:field="*{name}" placeholder="Organization Name" class="form-control">
 
-            <input type="text" th:field="*{email}" placeholder="AccountList Email" class="form-control">
+            <input type="text" th:field="*{email}" placeholder="Organization Email" class="form-control">
         <div class="row">
             <div class="col-6">
-                <a th:href="@{/accountlist}" class="large-button bg-purple"> < back to my list</a>
+                <a th:href="@{/resourcelist}" class="large-button bg-purple"> < back to my list</a>
             </div>
             <div class="col-6">
                 <button type="submit" class="large-button bg-purple">save resource >> </button>
