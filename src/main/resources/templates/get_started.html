@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -25,35 +25,29 @@
 
     <div class="nav bg-purple">
         <ul class="nav-links">
-            <li><a href="/login">Login</a>
-            <li><a href="/getstarted">Sign up!</a>
-            <li><a href="/about">About</a>
-            <li><a href="/hotlines">Hotlines</a>
+            <li><a href="/login"><span aria-hidden="true"></span>Login</a>
+            <li><a href="/get_started"><span aria-hidden="true"></span>Sign up!</a>
+            <li><a href="/about"><span aria-hidden="true"></span>About</a>
+            <li><a href="/hotlines"><span aria-hidden="true"></span>Hotlines</a>
         </ul>
     </div>
 </header>
 
-<!--    <div class="container">-->
-        <h1>Resource list: </h1>
-        <hr>
-
-        <form action="#" th:action="@{/saveResourceList}" th:object="${resourceList}" method="POST">
-            <input type="text" th:field="*{name}" placeholder="Organization Name" class="form-control">
-
-            <input type="text" th:field="*{email}" placeholder="Organization Email" class="form-control">
+<!-- LANDING PAGE -->
+<div class="container flex">
+<!--    <div class="row">-->
+        <div class="col">
+                <h1 class="fs-600 ff-sans-normal text-black">Create an account!<br><br></h1>
+                <h2 class="fs-500 ff-mono">Creating an account lets you set up your preferences.<br>This allows us to find resources that best fit your needs.</h2>
+        </div>
         <div class="row">
-            <div class="col-6">
-                <a th:href="@{/resourcelist}" class="large-button bg-purple"> < back to my list</a>
+            <div class="col-4">
+                <h2 class="fs-400 ff-mono text-black"><br> [ answer some quick questions about yourself, and we'll do the rest. ]<br></h2>
             </div>
-            <div class="col-6">
-                <button type="submit" class="large-button bg-purple">save resource >> </button>
+            <div class="col">
+                <a href="register" class="large-button fs-500 bg-purple">sign me up!</a>
             </div>
         </div>
-
-        </form>
-
-        <hr>
-
 
     <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
@@ -62,5 +56,6 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossOrigin="anonymous"></script>
 
+</div>
 </body>
 </html>

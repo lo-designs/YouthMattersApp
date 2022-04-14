@@ -12,7 +12,7 @@ registersignupForm.addEventListener("submit", function(e)  {
     e.preventDefault();
     console.log(registeremail);
     if(registerfirstName.value && registerlastName.value && registeremail.value && registerpassword.value && registerage.value && registerzipCode.value && registerinvalidCheck.checked) {
-        window.location.href="/";
+        window.location.href="register";
     } else {
         alert("please fill out all fields")
     }

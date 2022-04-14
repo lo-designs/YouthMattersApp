@@ -17,14 +17,14 @@ public class ResourceListController {
     @GetMapping("/resourcelist")
     public String viewResourceList(Model model) {
         model.addAttribute("listResourceLists", resourceListService.getAllResourceLists());
-        return "resourceList";
+        return "list";
     }
 
     @GetMapping("/showNewResourceListForm")
     public String showNewResourceListForm(Model model) {
         ResourceList resourceList = new ResourceList();
         model.addAttribute("resourceList", resourceList);
-        return "new-resourceList";
+        return "new_list";
     }
 
     // SAVE RESOURCE LIST
@@ -39,7 +39,7 @@ public class ResourceListController {
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
         ResourceList resourceList = resourceListService.getResourceListById(id);
         model.addAttribute("resourceList", resourceList);
-        return "update-resourceList";
+        return "update_list";
     }
 
     @GetMapping("deleteResourceList/{id}")

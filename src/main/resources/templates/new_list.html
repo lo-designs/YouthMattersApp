@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -13,7 +13,7 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>Youth|Matters | Account Created!</title>
+    <title>Youth|Matters.</title>
 </head>
 
 <body>
@@ -26,38 +26,41 @@
     <div class="nav bg-purple">
         <ul class="nav-links">
             <li><a href="/login">Login</a>
-            <li><a href="/getstarted">Sign up!</a>
+            <li><a href="/get_started">Sign up!</a>
             <li><a href="/about">About</a>
             <li><a href="/hotlines">Hotlines</a>
         </ul>
     </div>
 </header>
 
-<!-- ACCOUNT CREATED -->
-    <div>
-        <h1 class="fs-600 ff-sans-normal text-black">Nice, you've successfully set up your account!</h1>
-    </div>
+<!--    <div class="container">-->
+        <h1>Resource list: </h1>
+        <hr>
 
-    <div class="container">
+        <form action="#" th:action="@{/saveResourceList}" th:object="${resourceList}" method="POST">
+            <input type="text" th:field="*{name}" placeholder="Organization Name" class="form-control">
+
+            <input type="text" th:field="*{email}" placeholder="Organization Email" class="form-control">
         <div class="row">
-            <div class="col">
-                <div class="ul">
-                    <h4 class="fs-500 ff-mono text-black"><br>You can change your preferences & info at any time by going to your account and adjusting your account settings. Click below to see the list we found for you or just go straight to your account!<br></h4></div>
+            <div class="col-6">
+                <a th:href="@{/resourcelist}" class="large-button bg-purple"> < back to my list</a>
+            </div>
+            <div class="col-6">
+                <button type="submit" class="large-button bg-purple">save resource >> </button>
+            </div>
         </div>
-        <div class = "row">
-        <div class="col">
-            <a style="float: right" href="/resourcelist" class="large-button"> take me to my account > </a>
-        </div>
-        </div>
-    </div>
+
+        </form>
+
+        <hr>
 
 
-<!-- JAVASCRIPT -->
-<script src="js/script.js"></script>
-<!-- BOOTSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossOrigin="anonymous"></script>
-    </div>
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossOrigin="anonymous"></script>
+
 </body>
 </html>

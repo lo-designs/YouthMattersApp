@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -42,12 +41,12 @@ public class AppUserController {
 
     @GetMapping("/getstarted")
     public String getStarted() {
-        return "getStarted";
+        return "get_started";
     }
 
-    @GetMapping("/accountcreated")
-    public String accountCreated() {
-        return "accountCreated";
+    @GetMapping("/register_success")
+    public String register_success() {
+        return "register_success";
     }
 
     @GetMapping("/hotlines")
@@ -60,19 +59,24 @@ public class AppUserController {
         return "login";
     }
 
+    @GetMapping("/resources")
+    public String resources() {
+        return "resources";
+    }
+
     // I. DISPLAYS SIGNUP FOR USER (1: GENERAL INFO)
 
-    @GetMapping("/signup")
+    @GetMapping("/register")
     public String signup(Model model) {
         AppUser appUser = new AppUser();
         model.addAttribute("appUser", appUser);
-        return "signup";
+        return "register";
     }
 
     // II. SUBMIT USER FORM--IF VALID, CREATE USER
     // REGISTER/SIGNUP 1: PRIMARY NEEDS
 
-    @PostMapping("/register1")
+    @PostMapping("/register/step_1")
     public String register1(@ModelAttribute("appUser") AppUser appUser, Model model) {
         List<OrgTag> primaryNeedsTags = orgTagService.getAllTagsFromCategory("primary needs");
         appUserService.saveAppUser(appUser);
@@ -80,12 +84,12 @@ public class AppUserController {
         model.addAttribute("header","1 | What are your primary needs?");
         model.addAttribute("subheader", "[ what are your main reasons for using this app? ]");
         model.addAttribute("url","register2");
-        return "register";
+        return "register_options";
     }
 
     // REGISTER/SIGNUP 2: TYPES OF HELP
 
-    @PostMapping("/register2")
+    @PostMapping("/register/step_2")
     public String register2(@ModelAttribute("appUser") AppUser appUser, Model model) {
         List<OrgTag> mentalHealthTags = orgTagService.getAllTagsFromCategory("mental health");
         appUserService.saveAppUser(appUser);
@@ -93,12 +97,12 @@ public class AppUserController {
         model.addAttribute("header","2 | What types of help are you looking for?");
         model.addAttribute("subheader", "[ select all options that best fit the type of help you need. ]");
         model.addAttribute("url","register3");
-        return "register";
+        return "register_options";
     }
 
     // REGISTER/SIGNUP 3: IDENTIFIERS
 
-    @PostMapping("/register3")
+    @PostMapping("/register/step_3")
     public String register3(@ModelAttribute("appUser") AppUser appUser, Model model) {
         List<OrgTag> identifierTags = orgTagService.getAllTagsFromCategory("identifiers");
         appUserService.saveAppUser(appUser);
@@ -106,33 +110,33 @@ public class AppUserController {
         model.addAttribute("header","3 | Identifiers");
         model.addAttribute("subheader", "[ provide identifiers if you'd like to narrow down resources with those considerations. ]");
         model.addAttribute("url","register4");
-        return "register";
+        return "register_options";
     }
 
     // REGISTER/SIGNUP 4: INCOME
 
-    @PostMapping("/register4")
+    @PostMapping("/register/step_4")
     public String register4(@ModelAttribute("appUser") AppUser appUser, Model model) {
         List<OrgTag> incomeTags = orgTagService.getAllTagsFromCategory("income");
         appUserService.saveAppUser(appUser);
         model.addAttribute("tags", incomeTags);
-        model.addAttribute("header","4 | Identifiers");
-        model.addAttribute("subheader", "[ provide identifiers if you'd like to narrow down resources with those considerations. ]");
+        model.addAttribute("header","4 | Income");
+        model.addAttribute("subheader", "[ providing income & insurance details help to find only those that fit your income requirements ]");
         model.addAttribute("url", "register5");
-        return "register";
+        return "register_options";
     }
 
     // REGISTER/SIGNUP 5: RESOURCE TYPE
 
-    @PostMapping("/register5")
+    @PostMapping("/register/step_5")
     public String register5(@ModelAttribute("appUser") AppUser appUser, Model model) {
         List<OrgTag> resourceTags = orgTagService.getAllTagsFromCategory("resource");
         appUserService.saveAppUser(appUser);
         model.addAttribute("tags", resourceTags);
         model.addAttribute("header","5 | Types of resources");
         model.addAttribute("subheader", "[ narrow your options based on the types of resources you want. ]");
-        model.addAttribute("url", "accountcreated");
-        return "accountCreated";
+        model.addAttribute("url", "register6");
+        return "register/success";
     }
 
 }
