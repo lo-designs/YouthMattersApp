@@ -49,13 +49,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="resourceList : ${listResourceLists}">
-            <td th:text="${resourceList.name}"></td>
-            <td th:text="${resourceList.email}"></td>
-            <td><a th:href="@{/#/{id}(id=${resourceList.id})}" class="large-button fs-400">contact info</a></td>
-            <td><a th:href="@{/#/{id}(id=${resourceList.id})}" class="large-button fs-400">schedule appt</a></td>
-            <td><a th:href="@{/showFormForUpdate/{id}(id=${resourceList.id})}" class="large-button fs-400">update</a></td>
-            <td><a th:href="@{/deleteResourceList/{id}(id=${resourceList.id})}" class="large-button fs-400">delete</a></td>
+        <tr th:each="userList : ${listResourceLists}">
+            <td th:text="${userList.name}"></td>
+            <td th:text="${userList.email}"></td>
+            <td><a th:href="@{/#/{id}(id=${userList.id})}" class="large-button fs-400">contact info</a></td>
+            <td><a th:href="@{/#/{id}(id=${userList.id})}" class="large-button fs-400">schedule appt</a></td>
+            <td><a th:href="@{/showFormForUpdate/{id}(id=${userList.id})}" class="large-button fs-400">update</a></td>
+            <td><a th:href="@{/deleteResourceList/{id}(id=${userList.id})}" class="large-button fs-400">delete</a></td>
         </tr>
         </tbody>
     </table>

@@ -1,22 +1,18 @@
-package capstone.laura.youthmatters.organizations.models;
+package capstone.laura.youthmatters.users.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-public class Organization {
+@Table
+public class UserList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private String description;
+    private String email;
     private String location;
-
-    public Organization() {
-    }
+    private String description;
 
     public long getId() {
         return id;
@@ -34,12 +30,12 @@ public class Organization {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getLocation() {
@@ -49,5 +45,12 @@ public class Organization {
     public void setLocation(String location) {
         this.location = location;
     }
-}
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+}

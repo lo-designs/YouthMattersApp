@@ -1,5 +1,5 @@
 # Capstone Project
-## Health & Wellness Resource App 
+## Health & Wellness Resource App
 
 **Overview: An app that youth can use to find and connect with health and wellness resources specific to their needs.**
 

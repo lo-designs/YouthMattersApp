@@ -1,7 +1,7 @@
 package capstone.laura.youthmatters.users.controllers;
 
-import capstone.laura.youthmatters.organizations.models.OrgTag;
-import capstone.laura.youthmatters.organizations.services.OrgTagService;
+import capstone.laura.youthmatters.resources.models.ResourceTag;
+import capstone.laura.youthmatters.resources.services.ResourceTagService;
 import capstone.laura.youthmatters.users.models.AppUser;
 import capstone.laura.youthmatters.users.services.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +19,12 @@ public class AppUserController {
 
     private final AppUserService appUserService;
 
-    private final OrgTagService orgTagService;
+    private final ResourceTagService resourceTagService;
 
     @Autowired
-    public AppUserController(AppUserService appUserService, OrgTagService orgTagService) {
+    public AppUserController(AppUserService appUserService, ResourceTagService resourceTagService) {
         this.appUserService = appUserService;
-        this.orgTagService = orgTagService;
+        this.resourceTagService = resourceTagService;
     }
 
     // HOME/ABOUT/HOTLINES
@@ -67,7 +67,7 @@ public class AppUserController {
     // I. DISPLAYS SIGNUP FOR USER (1: GENERAL INFO)
 
     @GetMapping("/register")
-    public String signup(Model model) {
+    public String register(Model model) {
         AppUser appUser = new AppUser();
         model.addAttribute("appUser", appUser);
         return "register";
@@ -78,12 +78,12 @@ public class AppUserController {
 
     @PostMapping("/register/step_1")
     public String register1(@ModelAttribute("appUser") AppUser appUser, Model model) {
-        List<OrgTag> primaryNeedsTags = orgTagService.getAllTagsFromCategory("primary needs");
+        List<ResourceTag> primaryNeedsTags = resourceTagService.getAllTagsFromCategory("primary needs");
         appUserService.saveAppUser(appUser);
         model.addAttribute("tags", primaryNeedsTags);
         model.addAttribute("header","1 | What are your primary needs?");
         model.addAttribute("subheader", "[ what are your main reasons for using this app? ]");
-        model.addAttribute("url","register2");
+        model.addAttribute("url","register1");
         return "register_options";
     }
 
@@ -91,12 +91,12 @@ public class AppUserController {
 
     @PostMapping("/register/step_2")
     public String register2(@ModelAttribute("appUser") AppUser appUser, Model model) {
-        List<OrgTag> mentalHealthTags = orgTagService.getAllTagsFromCategory("mental health");
+        List<ResourceTag> mentalHealthTags = resourceTagService.getAllTagsFromCategory("mental health");
         appUserService.saveAppUser(appUser);
         model.addAttribute("tags", mentalHealthTags);
         model.addAttribute("header","2 | What types of help are you looking for?");
         model.addAttribute("subheader", "[ select all options that best fit the type of help you need. ]");
-        model.addAttribute("url","register3");
+        model.addAttribute("url","register2");
         return "register_options";
     }
 
@@ -104,12 +104,12 @@ public class AppUserController {
 
     @PostMapping("/register/step_3")
     public String register3(@ModelAttribute("appUser") AppUser appUser, Model model) {
-        List<OrgTag> identifierTags = orgTagService.getAllTagsFromCategory("identifiers");
+        List<ResourceTag> identifierTags = resourceTagService.getAllTagsFromCategory("identifiers");
         appUserService.saveAppUser(appUser);
         model.addAttribute("tags", identifierTags);
         model.addAttribute("header","3 | Identifiers");
         model.addAttribute("subheader", "[ provide identifiers if you'd like to narrow down resources with those considerations. ]");
-        model.addAttribute("url","register4");
+        model.addAttribute("url","register3");
         return "register_options";
     }
 
@@ -117,12 +117,12 @@ public class AppUserController {
 
     @PostMapping("/register/step_4")
     public String register4(@ModelAttribute("appUser") AppUser appUser, Model model) {
-        List<OrgTag> incomeTags = orgTagService.getAllTagsFromCategory("income");
+        List<ResourceTag> incomeTags = resourceTagService.getAllTagsFromCategory("income");
         appUserService.saveAppUser(appUser);
         model.addAttribute("tags", incomeTags);
         model.addAttribute("header","4 | Income");
         model.addAttribute("subheader", "[ providing income & insurance details help to find only those that fit your income requirements ]");
-        model.addAttribute("url", "register5");
+        model.addAttribute("url", "register4");
         return "register_options";
     }
 
@@ -130,13 +130,12 @@ public class AppUserController {
 
     @PostMapping("/register/step_5")
     public String register5(@ModelAttribute("appUser") AppUser appUser, Model model) {
-        List<OrgTag> resourceTags = orgTagService.getAllTagsFromCategory("resource");
+        List<ResourceTag> resourceTags = resourceTagService.getAllTagsFromCategory("resource");
         appUserService.saveAppUser(appUser);
         model.addAttribute("tags", resourceTags);
         model.addAttribute("header","5 | Types of resources");
         model.addAttribute("subheader", "[ narrow your options based on the types of resources you want. ]");
-        model.addAttribute("url", "register6");
-        return "register/success";
+        model.addAttribute("url", "register5");
+        return "register_options";
     }
-
 }

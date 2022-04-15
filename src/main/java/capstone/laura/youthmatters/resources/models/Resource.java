@@ -1,18 +1,22 @@
-package capstone.laura.youthmatters.users.models;
+package capstone.laura.youthmatters.resources.models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-@Table
-public class ResourceList {
+public class Resource {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private String email;
-    private String location;
     private String description;
+    private String location;
+
+    public Resource() {
+    }
 
     public long getId() {
         return id;
@@ -30,12 +34,12 @@ public class ResourceList {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDescription() {
+        return description;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getLocation() {
@@ -45,12 +49,5 @@ public class ResourceList {
     public void setLocation(String location) {
         this.location = location;
     }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
+

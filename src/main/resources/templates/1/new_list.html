@@ -37,7 +37,7 @@
         <h1>Resource list: </h1>
         <hr>
 
-        <form action="#" th:action="@{/saveResourceList}" th:object="${resourceList}" method="POST">
+        <form action="#" th:action="@{/saveResourceList}" th:object="${userList}" method="POST">
             <input type="text" th:field="*{name}" placeholder="Organization Name" class="form-control">
 
             <input type="text" th:field="*{email}" placeholder="Organization Email" class="form-control">

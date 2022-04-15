@@ -401,7 +401,7 @@ header.active .close {
 }
 
 
-/* RESOURCES TABLE */
+/* RESOURCES/HOTLINES TABLE */
 
 
 .resource-table {
@@ -420,8 +420,8 @@ header.active .close {
 }
 
 th {
-    align-content: flex-end;
-    padding: 20px;
+    align-content: center;
+    padding: 10px 40px;
     text-align: left;
     font-weight: 400;
     font-size: 1.5rem;
@@ -432,7 +432,7 @@ th {
 
 td {
     align-content: space-between;
-    padding: 15px;
+    padding: 10px 40px;
     text-align: left;
     vertical-align:middle;
     font-weight: 400;

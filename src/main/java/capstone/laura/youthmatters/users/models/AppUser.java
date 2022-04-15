@@ -1,7 +1,7 @@
 package capstone.laura.youthmatters.users.models;
 
-import capstone.laura.youthmatters.organizations.models.OrgTag;
-import capstone.laura.youthmatters.organizations.models.Organization;
+import capstone.laura.youthmatters.resources.models.ResourceTag;
+import capstone.laura.youthmatters.resources.models.Resource;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -20,17 +20,17 @@ public class AppUser {
     private String password;
     private int age;
     private int zipcode;
-    @ManyToMany(targetEntity = OrgTag.class)
-    private Set<OrgTag> tags;
-    @ManyToMany(targetEntity = Organization.class)
-    private Set<Organization> organizations;
+    @ManyToMany(targetEntity = ResourceTag.class)
+    private Set<ResourceTag> tags;
+    @ManyToMany(targetEntity = Resource.class)
+    private Set<Resource> resources;
     @ManyToMany(targetEntity = Role.class)
     private Set<Role> roles;
 
     public AppUser() {
     }
 
-    public AppUser(String firstName, String lastName, String email, String username, String password, int age, int zipcode, Set<OrgTag> tags, Set<Organization> organizations, Set<Role> roles) {
+    public AppUser(String firstName, String lastName, String email, String username, String password, int age, int zipcode, Set<ResourceTag> tags, Set<Resource> resources, Set<Role> roles) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -39,7 +39,7 @@ public class AppUser {
         this.age = age;
         this.zipcode = zipcode;
         this.tags = tags;
-        this.organizations = organizations;
+        this.resources = resources;
         this.roles = roles;
     }
 
