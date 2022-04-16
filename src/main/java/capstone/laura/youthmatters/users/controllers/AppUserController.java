@@ -83,7 +83,7 @@ public class AppUserController {
         model.addAttribute("tags", primaryNeedsTags);
         model.addAttribute("header","1 | What are your primary needs?");
         model.addAttribute("subheader", "[ what are your main reasons for using this app? ]");
-        model.addAttribute("url","register1");
+        model.addAttribute("url","register/step_2");
         return "register_options";
     }
 
@@ -96,7 +96,7 @@ public class AppUserController {
         model.addAttribute("tags", mentalHealthTags);
         model.addAttribute("header","2 | What types of help are you looking for?");
         model.addAttribute("subheader", "[ select all options that best fit the type of help you need. ]");
-        model.addAttribute("url","register2");
+        model.addAttribute("url","register/step_3");
         return "register_options";
     }
 
@@ -109,7 +109,7 @@ public class AppUserController {
         model.addAttribute("tags", identifierTags);
         model.addAttribute("header","3 | Identifiers");
         model.addAttribute("subheader", "[ provide identifiers if you'd like to narrow down resources with those considerations. ]");
-        model.addAttribute("url","register3");
+        model.addAttribute("url","register/step_4");
         return "register_options";
     }
 
@@ -122,7 +122,7 @@ public class AppUserController {
         model.addAttribute("tags", incomeTags);
         model.addAttribute("header","4 | Income");
         model.addAttribute("subheader", "[ providing income & insurance details help to find only those that fit your income requirements ]");
-        model.addAttribute("url", "register4");
+        model.addAttribute("url", "register/step_5");
         return "register_options";
     }
 
@@ -135,7 +135,7 @@ public class AppUserController {
         model.addAttribute("tags", resourceTags);
         model.addAttribute("header","5 | Types of resources");
         model.addAttribute("subheader", "[ narrow your options based on the types of resources you want. ]");
-        model.addAttribute("url", "register5");
-        return "register_options";
+        model.addAttribute("url", "register/success");
+        return "register/success";
     }
 }

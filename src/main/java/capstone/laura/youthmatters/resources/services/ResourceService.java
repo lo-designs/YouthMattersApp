@@ -6,8 +6,11 @@ import java.util.List;
 
 public interface ResourceService {
 
-    List<Resource> getAllOrganizationLists();
-    void saveOrganization(Resource resource);
-    Resource getOrganizationById(long id);
-    void deleteOrganizationById(long id);
+    List<Resource> getAllResourceLists();
+
+    List<Resource> getResourceListByEmail(String email);
+
+    void saveResource(Resource resource);
+    Resource getResourceById(long id);
+    void deleteResourceById(long id);
 }

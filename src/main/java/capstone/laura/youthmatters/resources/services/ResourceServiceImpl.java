@@ -20,18 +20,18 @@ public class ResourceServiceImpl implements ResourceService {
     }
 
     @Override
-    public List<Resource> getAllOrganizationLists() {
+    public List<Resource> getAllResourceLists() {
         return resourceRepository.findAll();
     }
 
     @Override
-    public void saveOrganization(Resource resource) {
+    public void saveResource(Resource resource) {
         resourceRepository.save(resource);
 
     }
 
     @Override
-    public Resource getOrganizationById(long id) {
+    public Resource getResourceById(long id) {
         Optional<Resource> optional = resourceRepository.findById(id);
         Resource resource = null;
         if (optional.isPresent()) {
@@ -43,7 +43,7 @@ public class ResourceServiceImpl implements ResourceService {
     }
 
     @Override
-    public void deleteOrganizationById(long id) {
+    public void deleteResourceById(long id) {
         resourceRepository.deleteById(id);
     }
 }

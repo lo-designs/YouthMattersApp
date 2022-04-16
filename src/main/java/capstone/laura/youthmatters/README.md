@@ -6,10 +6,10 @@
 ### Stories
 
 1 | As someone who isn't sure how to look for help for <mental/physical health> issues,
-I want connect with resources,
+I want to connect with resources,
 so that I can receive support <for issue>.
 
-2 | As a someone who wants consistent help,
+2 | As someone who wants consistent help,
 I want a place to save and refer back to resources,
 so that I can easily stay in contact with help/support.
 
@@ -17,7 +17,7 @@ so that I can easily stay in contact with help/support.
 I want to be able to save my preferences/needs,
 so that I can connect with the appropriate resources.
 
-4 | As a high schooler living in a rural area,
+4 | As someone living in a rural area,
 I want to find resources that offer remote help,
 so that I do not need to worry about commuting.
 
