@@ -13,10 +13,12 @@ import java.util.Optional;
 public class ResourceServiceImpl implements ResourceService {
 
     private final ResourceRepository resourceRepository;
+    private final ResourceService resourceService;
 
     @Autowired
-    public ResourceServiceImpl(ResourceRepository resourceRepository) {
+    public ResourceServiceImpl(ResourceRepository resourceRepository, ResourceService resourceService) {
         this.resourceRepository = resourceRepository;
+        this.resourceService = resourceService;
     }
 
     @Override
@@ -29,7 +31,10 @@ public class ResourceServiceImpl implements ResourceService {
         resourceRepository.save(resource);
 
     }
-
+    @Override
+    public List<Resource> getResourceListByEmail(String email) {
+        return resourceService.getResourceListByEmail(email);
+    }
     @Override
     public Resource getResourceById(long id) {
         Optional<Resource> optional = resourceRepository.findById(id);

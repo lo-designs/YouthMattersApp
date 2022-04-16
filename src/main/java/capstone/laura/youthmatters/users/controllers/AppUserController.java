@@ -92,6 +92,7 @@ public class AppUserController {
     @PostMapping("/register/step_2")
     public String register2(@ModelAttribute("appUser") AppUser appUser, Model model) {
         List<ResourceTag> mentalHealthTags = resourceTagService.getAllTagsFromCategory("mental health");
+
         appUserService.saveAppUser(appUser);
         model.addAttribute("tags", mentalHealthTags);
         model.addAttribute("header","2 | What types of help are you looking for?");
