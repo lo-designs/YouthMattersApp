@@ -1,12 +1,12 @@
 package capstone.laura.youthmatters.resources.services;
 
 import capstone.laura.youthmatters.resources.models.Resource;
+import capstone.laura.youthmatters.resources.models.ResourceTag;
 import capstone.laura.youthmatters.resources.repositories.ResourceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 
 @Service
@@ -24,6 +24,11 @@ public class ResourceServiceImpl implements ResourceService {
     @Override
     public List<Resource> getAllResourceLists() {
         return resourceRepository.findAll();
+    }
+
+    @Override
+    public List<Resource> getResourcesByTags(Collection<Long> ids) {
+        return resourceRepository.findResourcesByTagIds(ids);
     }
 
     @Override

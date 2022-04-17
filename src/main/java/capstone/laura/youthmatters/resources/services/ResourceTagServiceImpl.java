@@ -21,4 +21,9 @@ public class ResourceTagServiceImpl implements ResourceTagService {
     public List<ResourceTag> getAllTagsFromCategory(String category) {
         return resourceTagRepository.findByCategory(category);
     }
+
+    @Override
+    public List<ResourceTag> getAllTagWithIds(List<Long> idsList) {
+        return resourceTagRepository.findAllById(idsList);
+    }
 }

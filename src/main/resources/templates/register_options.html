@@ -39,10 +39,10 @@
 </div>
 <!-- FILTERS -->
 <div class="container">
-<form id="form" th:action="@{/{category}(category=${url})}" method="POST">
+<form id="form" th:action="@{/{url}(url=${url})}" method="POST">
     <label>
-        <select name="filter[]" class="custom-select" multiple>
-            <option th:each="tag : ${tags}" th:text="${tag.type}" th:value="${tag.type}"></option>
+        <select th:each="tag, i : ${tags}" th:name="'ids[' + ${i.index} + ']'" class="custom-select" multiple>
+            <option th:text="${tag.type}" th:value="${tag.id}" th:name="${tag.id}"></option>
         </select>
     </label>
 

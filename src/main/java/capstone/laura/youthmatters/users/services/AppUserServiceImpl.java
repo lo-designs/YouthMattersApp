@@ -19,4 +19,9 @@ public class AppUserServiceImpl implements AppUserService {
     public void saveAppUser(AppUser appUser) {
         this.appUserRepository.save(appUser);
     }
+
+    @Override
+    public AppUser getUserById(long id) {
+        return appUserRepository.findById(id).get();
+    }
 }

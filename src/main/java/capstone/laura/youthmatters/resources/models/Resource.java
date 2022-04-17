@@ -13,7 +13,6 @@ public class Resource {
     private long id;
     private String name;
     private String description;
-    private String services;
     private String ageRange;
     private String hours;
     private String location;
@@ -45,14 +44,6 @@ public class Resource {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getServices() {
-        return services;
-    }
-
-    public void setServices(String services) {
-        this.services = services;
     }
 
     public String getAgeRange() {

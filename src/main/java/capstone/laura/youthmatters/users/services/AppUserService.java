@@ -8,6 +8,6 @@ import java.util.List;
 public interface AppUserService {
 
     void saveAppUser(AppUser appUser);
-    
+    AppUser getUserById(long id);
 
 }

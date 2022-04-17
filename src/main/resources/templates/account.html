@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -32,6 +32,45 @@
         </ul>
     </div>
 </header>
+
+<!-- RESOURCE LIST -->
+<section class="table-section">
+    <div class="tbl-header">
+        <table class="resource-table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Hours</th>
+                <th>Remove Resource</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table>
+            <tbody>
+            <tr th:each="resource : ${resources}">
+                <td th:text="${resource.name}"></td>
+                <td th:text="${resource.description}"></td>
+                <td th:text="${resource.hours}"></td>
+
+            <td><a th:href="@{/deleteResource/{id}(id=${resource.id})}" class="large-button fs-400">remove</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+<!--    <div class = "row">-->
+<!--        <div class="col">-->
+<!--            <a th:href="@{/showNewResourceListForm}" style="float: right" class="large-button">add resource</a>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+</section>
+
 
 <!-- JAVASCRIPT -->
 <script src="js/script.js"></script>

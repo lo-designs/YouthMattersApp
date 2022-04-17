@@ -96,4 +96,12 @@ public class AppUser {
     public void setZipcode(int zipcode) {
         this.zipcode = zipcode;
     }
+
+    public Set<ResourceTag> getTags() {
+        return tags;
+    }
+
+    public void setTags(Set<ResourceTag> tags) {
+        this.tags = tags;
+    }
 }
