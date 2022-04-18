@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -33,64 +33,74 @@
         </div>
     </header>
 
-        <!-- SIGN UP 1: GENERAL INFO -->
+        <!-- SIGN UP FORM: GENERAL INFO -->
         <div class="container">
+            <div th:if="${param.success}">
+                <div class="alert alert-info">You've successfully registered to our awesome app!</div>
+            </div>
+
             <div>
                 <h1 class="fs-600 ff-sans-normal text-black">Some general info</h1>
                 <h2 class="fs-500 ff-mono text-black"><br>[ filling out this form allows us to sift through resources based on your age and location. ] <br><br><br></h2>
             </div>
+
         <div class="form">
-            <form th:action="@{/register/step_1}" th:object="${appUser}" id="signupForm" class="row g-3 needs-validation" method="POST">
+            <form th:action="@{/register}" th:object="${appUser}" id="signupForm" class="row g-3 needs-validation" method="POST">
 
-                <div class="col-md-4">
-                    <label for="firstName" class="form-label">[ first name ]</label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" th:field="*{firstName}" class="form-control" id="firstName" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">Please enter your first name.</div>
-                    </div>
-                </div>
+                <!-- ERROR MESSAGE -->
+<!--                <p class="error-message" th:if="${#fields.hasGlobalErrors()}"-->
+<!--                   th:each="error : ${#fields.errors('global')}" th:text="${error}">Validation error</p>-->
 
-                <div class="col-md-4">
-                    <label for="lastName" class="form-label">[ last name ]</label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" th:field="*{lastName}" class="form-control" id="lastName" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">Please enter your last name.</div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <label for="email" class="form-label">[ email ]</label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" th:field="*{email}" class="form-control" id="email" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">Please add your email.</div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <label for="password" class="form-label">[ create a password ]</label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" th:field="*{password}" class="form-control" id="password" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">Please create a password.</div>
+                <!-- FORM FIELDS -->
+                <div class="col-md-3">
+                    <div class="form-group" th:classappend="${#fields.hasErrors('firstName')}? 'has-error':''">
+                    <label for="firstName" class="control-label">[ first name ]</label>
+                            <input id="firstName" class="form-control" th:field="*{firstName}" />
+                        <p class="error-message" th:each="error: ${#fields.errors('firstName')}" th:text="${error}">Validation error</p>
                     </div>
                 </div>
 
                 <div class="col-md-3">
+                    <div class="form-group" th:classappend="${#fields.hasErrors('lastName')}? 'has-error':''">
+                    <label for="lastName" class="control-label">[ last name ]</label>
+                            <input id="lastName" class="form-control" th:field="*{lastName}" />
+                        <p class="error-message" th:each="error : ${#fields.errors('lastName')}" th:text="${error}">Validation error</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group"
+                         th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
+                        <label for="password" class="control-label">Password</label>
+                            <input id="password" class="form-control" type="password" th:field="*{password}" />
+                        <p class="error-message" th:each="error : ${#fields.errors('password')}" th:text="${error}">Validation error</p>
+                    </div>
+                </div>
+
+
+<!--                <div class="col-md-6">-->
+<!--                    <label for="password" class="form-label">[ create a password ]</label>-->
+<!--                    <div class="input-group has-validation">-->
+<!--                        <span class="input-group-text" id="inputGroupPrepend">@</span>-->
+<!--                        <input type="text" th:field="*{password}" class="form-control" id="password" aria-describedby="inputGroupPrepend" required>-->
+<!--                        <div class="invalid-feedback">Please create a password.</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+            <div class="row">
+                <div class="col-md-4">
                     <label for="age" class="form-label">[ age ]</label>
                     <input type="text" th:field="*{age}" class="form-control" id="age" required>
                     <div class="invalid-feedback">Please provide your age.</div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label for="zipCode" class="form-label">[ zip ]</label>
                     <input type="text" th:field="*{zipcode}" class="form-control" id="zipCode" required>
                     <div class="invalid-feedback">Please provide a valid zip.</div>
                 </div>
 
-                <div class="col-12">
+                <div class="col-4">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                         <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
@@ -102,12 +112,19 @@
                     <div class="col"><div><a style="float:left" href="/get_started" class="large-button"> < back </a></div></div>
                     <div class="col"><div><button style="float: right" class="large-button" type="submit">submit</button></div></div>
                 </div>
-            </form>
-
+            </div>
+        </form>
+        </div>
+            </div>
             <!-- JAVASCRIPT -->
+            <script type="text/javascript"
+                    th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+            <script type="text/javascript"
+                    th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+
             <script src="js/script.js"></script>
-            <!--            <script src="js/signup.js"></script>-->
-            <!--            <script src="js/register-signup-submit.js"></script>-->
+
             <!-- BOOTSTRAP JS -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

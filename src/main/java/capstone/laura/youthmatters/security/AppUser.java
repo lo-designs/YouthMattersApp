@@ -1,8 +1,7 @@
 package capstone.laura.youthmatters.security;
 
-import capstone.laura.youthmatters.resources.models.ResourceTag;
-import capstone.laura.youthmatters.resources.models.Resource;
-import capstone.laura.youthmatters.security.Role;
+import capstone.laura.youthmatters.healthresources.models.ResourceTag;
+import capstone.laura.youthmatters.healthresources.models.Resource;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -34,10 +33,27 @@ public class AppUser {
                     name = "role_id", referencedColumnName = "id"))
     private Collection<Role> roles;
 
+    @Override
+    public String toString() {
+        return "AppUser{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", age=" + age +
+                ", zipcode=" + zipcode +
+                ", tags=" + tags +
+                ", resources=" + resources +
+                ", roles=" + roles +
+                '}';
+    }
+
     public AppUser() {
     }
 
     public AppUser(String firstName, String lastName, String email, String password, int age, int zipcode, Set<ResourceTag> tags, Set<Resource> resources, Set<Role> roles) {
+        this.id = 0;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -49,6 +65,7 @@ public class AppUser {
         this.roles = roles;
     }
     public AppUser(String firstName, String lastName, String email, String password) {
+        this.id = 0;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -135,14 +152,4 @@ public class AppUser {
         this.roles = roles;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + "*********" + '\'' +
-                '}';
-    }
 }

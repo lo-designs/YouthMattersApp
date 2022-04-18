@@ -1,6 +1,6 @@
-package capstone.laura.youthmatters.resources.repositories;
+package capstone.laura.youthmatters.healthresources.repositories;
 
-import capstone.laura.youthmatters.resources.models.ResourceTag;
+import capstone.laura.youthmatters.healthresources.models.ResourceTag;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

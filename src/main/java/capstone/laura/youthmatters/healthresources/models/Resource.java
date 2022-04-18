@@ -1,21 +1,23 @@
-package capstone.laura.youthmatters.resources.models;
+package capstone.laura.youthmatters.healthresources.models;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class Hotline {
+public class Resource {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String description;
+    private String ageRange;
     private String hours;
-    @ManyToMany(targetEntity = Hotline.class)
-    private Set<Hotline> hotlines;
+    private String location;
+    @ManyToMany(targetEntity = ResourceTag.class)
+    private Set<ResourceTag> resourceTags;
 
-    public Hotline() {
+    public Resource() {
     }
 
     public long getId() {
@@ -42,6 +44,14 @@ public class Hotline {
         this.description = description;
     }
 
+    public String getAgeRange() {
+        return ageRange;
+    }
+
+    public void setAgeRange(String ageRange) {
+        this.ageRange = ageRange;
+    }
+
     public String getHours() {
         return hours;
     }
@@ -49,5 +59,15 @@ public class Hotline {
     public void setHours(String hours) {
         this.hours = hours;
     }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }
+
+
 

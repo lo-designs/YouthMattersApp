@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -42,21 +41,35 @@
             <div th:if="${param.logout}">
                 You have been logged out.
             </div>
+            <div>
             <form id="login-form" th:action="@{/login}" method="post">
-<!--            <form id="login-form" class="login-form" action="">-->
-                <h1 class="fs-600 ff-sans-normal">Hey, welcome back!<br><br></h1>
-                <div><label class="fs-500" for="email">email:</label></div>
-                    <div><input type="email" name="" id="email" placeholder="email: "></div>
-                <div><label class="fs-500" for="password">password:</label></div>
-                    <div><input type="password" name="" id="password" placeholder="password: "></div>
-                <div><input class="large-button" type="submit" value="login"></div>
+                <h1 class="fs-500 ff-sans-normal">Hey, welcome back!<br><br></h1>
+                <div>
+                    <label class="fs-400" for="username">Email</label>:
+                    <input type="text" id="username" name="username" class="form-control" autofocus="autofocus" placeholder="Username" />
+                </div>
+                <div>
+                    <label class="fs-400" for="password">Password</label>:
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+                </div>
 
+                <div>
+                    <input class="large-button" type="submit" value="login">
+                </div>
+            </form>
+
+            </div>
                 <h2 class="fs-500 ff-sans-normal"><br>New here?<br>Click the button below to get started!</h2>
                 <a href="/get_started" class="large-button">get started!</a>
-            </form>
+
         </div>
 
     <!-- JAVASCRIPT -->
+    <script type="text/javascript"
+            th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+    <script type="text/javascript"
+            th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
     <script src="js/login.js"></script>
     <script src="js/script.js"></script>
     <!-- BOOTSTRAP JS -->

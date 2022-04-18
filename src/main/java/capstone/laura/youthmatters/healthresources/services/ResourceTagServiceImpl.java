@@ -1,7 +1,7 @@
-package capstone.laura.youthmatters.resources.services;
+package capstone.laura.youthmatters.healthresources.services;
 
-import capstone.laura.youthmatters.resources.models.ResourceTag;
-import capstone.laura.youthmatters.resources.repositories.ResourceTagRepository;
+import capstone.laura.youthmatters.healthresources.models.ResourceTag;
+import capstone.laura.youthmatters.healthresources.repositories.ResourceTagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

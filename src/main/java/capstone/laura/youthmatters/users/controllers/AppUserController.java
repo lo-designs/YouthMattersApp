@@ -1,9 +1,9 @@
 package capstone.laura.youthmatters.users.controllers;
 
-import capstone.laura.youthmatters.resources.models.Resource;
-import capstone.laura.youthmatters.resources.models.ResourceTag;
-import capstone.laura.youthmatters.resources.services.ResourceService;
-import capstone.laura.youthmatters.resources.services.ResourceTagService;
+import capstone.laura.youthmatters.healthresources.models.Resource;
+import capstone.laura.youthmatters.healthresources.models.ResourceTag;
+import capstone.laura.youthmatters.healthresources.services.ResourceService;
+import capstone.laura.youthmatters.healthresources.services.ResourceTagService;
 import capstone.laura.youthmatters.security.AppUserDetailsService;
 import capstone.laura.youthmatters.security.AppUserDto;
 import capstone.laura.youthmatters.security.AppUser;
@@ -60,13 +60,13 @@ public class AppUserController {
 
     @GetMapping("/login")
     public String login() {
-        return "login_actual";
+        return "login";
     }
 
-    @GetMapping("/resources")
-    public String resources() {
-        return "resources";
-    }
+//    @GetMapping("/resources")
+//    public String resources() {
+//        return "resources";
+//    }
 
     @GetMapping("/account")
     public String account(Model model) {
@@ -85,6 +85,12 @@ public class AppUserController {
         model.addAttribute("appUser", appUser);
         return "register";
     }
+
+//    @GetMapping("/register")
+//    public String showRegistrationForm(Model model) {
+//        model.addAttribute("appUser", new AppUserDto());
+//        return "register";
+//    }
 
     // II. SUBMIT USER FORM--IF VALID, CREATE USER
     // REGISTER/SIGNUP 1: PRIMARY NEEDS
@@ -153,7 +159,7 @@ public class AppUserController {
 
     // REGISTER/SIGNUP 5: RESOURCE TYPE
 
-    @PostMapping("/register/step_4")
+    @PostMapping("/register/step_5")
     public String register5(Model model, @ModelAttribute SelectionDto optionIds) {
         optionIds.getIds().removeIf(Objects::isNull);
         List<ResourceTag> selectedTags = resourceTagService.getAllTagWithIds(optionIds.getIds());

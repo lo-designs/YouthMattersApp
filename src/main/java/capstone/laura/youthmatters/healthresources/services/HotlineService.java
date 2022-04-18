@@ -1,6 +1,6 @@
-package capstone.laura.youthmatters.resources.services;
+package capstone.laura.youthmatters.healthresources.services;
 
-import capstone.laura.youthmatters.resources.models.Hotline;
+import capstone.laura.youthmatters.healthresources.models.Hotline;
 
 import java.util.List;
 

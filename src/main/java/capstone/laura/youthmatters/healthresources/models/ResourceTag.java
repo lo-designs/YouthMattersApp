@@ -1,4 +1,4 @@
-package capstone.laura.youthmatters.resources.models;
+package capstone.laura.youthmatters.healthresources.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

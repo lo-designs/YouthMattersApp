@@ -1,7 +1,7 @@
-package capstone.laura.youthmatters.resources.services;
+package capstone.laura.youthmatters.healthresources.services;
 
-import capstone.laura.youthmatters.resources.models.Hotline;
-import capstone.laura.youthmatters.resources.repositories.HotlineRepository;
+import capstone.laura.youthmatters.healthresources.models.Hotline;
+import capstone.laura.youthmatters.healthresources.repositories.HotlineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

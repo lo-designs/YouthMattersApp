@@ -1,11 +1,9 @@
-package capstone.laura.youthmatters.resources.services;
+package capstone.laura.youthmatters.healthresources.services;
 
-import capstone.laura.youthmatters.resources.models.Resource;
-import capstone.laura.youthmatters.resources.models.ResourceTag;
+import capstone.laura.youthmatters.healthresources.models.Resource;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 public interface ResourceService {
 
