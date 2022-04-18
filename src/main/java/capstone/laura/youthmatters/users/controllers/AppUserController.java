@@ -4,7 +4,10 @@ import capstone.laura.youthmatters.resources.models.Resource;
 import capstone.laura.youthmatters.resources.models.ResourceTag;
 import capstone.laura.youthmatters.resources.services.ResourceService;
 import capstone.laura.youthmatters.resources.services.ResourceTagService;
-import capstone.laura.youthmatters.users.models.AppUser;
+import capstone.laura.youthmatters.security.AppUserDetailsService;
+import capstone.laura.youthmatters.security.AppUserDto;
+import capstone.laura.youthmatters.security.AppUser;
+import capstone.laura.youthmatters.users.models.SelectionDto;
 import capstone.laura.youthmatters.users.services.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Controller
@@ -58,7 +60,7 @@ public class AppUserController {
 
     @GetMapping("/login")
     public String login() {
-        return "login";
+        return "login_actual";
     }
 
     @GetMapping("/resources")
@@ -132,22 +134,22 @@ public class AppUserController {
         return "register_options";
     }
 
-    // REGISTER/SIGNUP 4: INCOME
+//     REGISTER/SIGNUP 4: INCOME
 
-//    @PostMapping("/register/step_4")
-//    public String register4(Model model, @ModelAttribute SelectionDto optionIds) {
-//        optionIds.getIds().removeIf(Objects::isNull);
-//        List<ResourceTag> selectedTags = resourceTagService.getAllTagWithIds(optionIds.getIds());
-//        AppUser user = appUserService.getUserById(55);
-//        user.getTags().addAll(selectedTags);
-//        appUserService.saveAppUser(user);
-//        List<ResourceTag> incomeTags = resourceTagService.getAllTagsFromCategory("income");
-//        model.addAttribute("tags", incomeTags);
-//        model.addAttribute("header","4 | Income");
-//        model.addAttribute("subheader", "[ providing income & insurance details help to find only those that fit your income requirements ]");
-//        model.addAttribute("url", "register/step_5");
-//        return "register_options";
-//    }
+    @PostMapping("/register/step_4")
+    public String register4(Model model, @ModelAttribute SelectionDto optionIds) {
+        optionIds.getIds().removeIf(Objects::isNull);
+        List<ResourceTag> selectedTags = resourceTagService.getAllTagWithIds(optionIds.getIds());
+        AppUser user = appUserService.getUserById(55);
+        user.getTags().addAll(selectedTags);
+        appUserService.saveAppUser(user);
+        List<ResourceTag> incomeTags = resourceTagService.getAllTagsFromCategory("income");
+        model.addAttribute("tags", incomeTags);
+        model.addAttribute("header","4 | Income");
+        model.addAttribute("subheader", "[ providing income & insurance details help to find only those that fit your income requirements ]");
+        model.addAttribute("url", "register/step_5");
+        return "register_options";
+    }
 
     // REGISTER/SIGNUP 5: RESOURCE TYPE
 

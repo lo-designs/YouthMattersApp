@@ -1,6 +1,6 @@
 package capstone.laura.youthmatters.users.repositories;
 
-import capstone.laura.youthmatters.users.models.AppUser;
+import capstone.laura.youthmatters.security.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

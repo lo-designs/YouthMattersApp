@@ -6,18 +6,14 @@
 ### Stories
 
 1 | As someone who isn't sure how to look for help for <mental/physical health> issues,
-I want connect with resources,
+I want to connect with resources,
 so that I can receive support <for issue>.
 
-2 | As a someone who wants consistent help,
-I want a place to save and refer back to resources,
-so that I can easily stay in contact with help/support.
-
-3 | As someone with specific needs,
+2 | As someone with specific needs,
 I want to be able to save my preferences/needs,
 so that I can connect with the appropriate resources.
 
-4 | As a high schooler living in a rural area,
+3 | As someone without means of transportation,
 I want to find resources that offer remote help,
 so that I do not need to worry about commuting.
 
@@ -35,9 +31,8 @@ would make it easier for people to find appropriate help.
 
 **Allow those using the app to filter results based on whether they can connect to resources in person or remote.**
 *| Scenario 3 |*
-Given that some youth do not have local resources or are unable to commute,
-when they find resources,
-then they have the option to only find resources that fit their needs (in person/remote).
+Given that some people do not have local resources or are unable to commute,
+they are able to filter by resources that are online or over the phone.
 
 #### Stretch Goals
 

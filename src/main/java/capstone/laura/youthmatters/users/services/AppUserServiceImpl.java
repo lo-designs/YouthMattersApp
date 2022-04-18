@@ -1,6 +1,6 @@
 package capstone.laura.youthmatters.users.services;
 
-import capstone.laura.youthmatters.users.models.AppUser;
+import capstone.laura.youthmatters.security.AppUser;
 import capstone.laura.youthmatters.users.repositories.AppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

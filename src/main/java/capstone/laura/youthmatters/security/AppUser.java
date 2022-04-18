@@ -1,9 +1,11 @@
-package capstone.laura.youthmatters.users.models;
+package capstone.laura.youthmatters.security;
 
 import capstone.laura.youthmatters.resources.models.ResourceTag;
 import capstone.laura.youthmatters.resources.models.Resource;
+import capstone.laura.youthmatters.security.Role;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Set;
 
 @Entity
@@ -23,8 +25,14 @@ public class AppUser {
     private Set<ResourceTag> tags;
     @ManyToMany(targetEntity = Resource.class)
     private Set<Resource> resources;
-    @ManyToMany(targetEntity = Role.class)
-    private Set<Role> roles;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(
+                    name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"))
+    private Collection<Role> roles;
 
     public AppUser() {
     }
@@ -38,6 +46,20 @@ public class AppUser {
         this.zipcode = zipcode;
         this.tags = tags;
         this.resources = resources;
+        this.roles = roles;
+    }
+    public AppUser(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
+
+    public AppUser(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
         this.roles = roles;
     }
 
@@ -103,5 +125,24 @@ public class AppUser {
 
     public void setTags(Set<ResourceTag> tags) {
         this.tags = tags;
+    }
+
+    public Collection<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + "*********" + '\'' +
+                '}';
     }
 }
