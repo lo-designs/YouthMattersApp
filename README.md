@@ -1,6 +1,6 @@
 # Capstone Project
 
-##Health & wellness app for adolescents/young adults.
+## Health & wellness app for adolescents/young adults.
 
 Youth|Matters is an app to help adolescents/young adults find health & wellness resources based on factors like age, location, and preferences. Users can save and access those resources directly from the app.
 
@@ -13,7 +13,6 @@ Youth|Matters is an app to help adolescents/young adults find health & wellness 
 - [Technical Architecture](#technical-architecture)
 - [Wireframes](#wireframes)
 - [Schema Diagram](#schema-diagram)
-- [Tech Stack](#tech-stack)
 - [Technical Challenges](#technical-challenges)
 - [Learning Experience](#what-i-have-learned)
 - [Acknowledgments](#acknowledgements)
