@@ -40,7 +40,32 @@
                 <h1 class="fs-500 ff-sans-normal text-black"><br>If this is an emergency, click here.<br><br></h1>
             </div>
 
-            <!-- TABLE -->
+            <!-- HOTLINE LIST -->
+            <section class="table-section">
+                <div class="tbl-header">
+                    <table class="resource-table">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Hours</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbl-content">
+                    <table>
+                        <tbody>
+                        <tr th:each="hotline : ${hotlines}">
+                            <td th:text="${hotline.name}"></td>
+                            <td th:text="${hotline.description}"></td>
+                            <td th:text="${hotline.hours}"></td>
+
+                            <td><a th:href="@{/deleteHotline/{id}(id=${hotline.id})}" class="large-button fs-400">remove</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             <!-- JAVASCRIPT -->
             <script src="js/script.js"></script>

@@ -15,15 +15,15 @@ public class UserResourceListController {
     private UserResourceListService userResourceListService;
 
 //    @GetMapping("/account")
-//    public String viewResourceList(Model model) {
-//        model.addAttribute("listResourceLists", userResourceListService.getAllResourceLists());
+//    public String viewUserResourceList(Model model) {
+//        model.addAttribute("listUserResourceLists", userResourceListService.getAllUserResourceLists());
 //        return "account";
 //    }
 
     @GetMapping("/showNewUserResourceListForm")
     public String showNewResourceListForm(Model model) {
         UserResourceList userResourceList = new UserResourceList();
-        model.addAttribute("resourceList", userResourceList);
+        model.addAttribute("userResourceList", userResourceList);
         return "new_list";
     }
 
@@ -42,8 +42,8 @@ public class UserResourceListController {
         return "update_list";
     }
 
-    @GetMapping("deleteResourceList/{id}")
-    public String deleteUserResourceList(@PathVariable(value = "id") long id) {
+    @GetMapping("deleteUserResourceList/{id}")
+    public String deleteUserUserResourceList(@PathVariable(value = "id") long id) {
         this.userResourceListService.deleteUserResourceListById(id);
         return "redirect:/account";
     }

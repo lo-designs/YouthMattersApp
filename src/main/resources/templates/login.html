@@ -41,28 +41,33 @@
             <div th:if="${param.logout}">
                 You have been logged out.
             </div>
-            <div>
+
+        <div class="row">
             <form id="login-form" th:action="@{/login}" method="post">
-                <h1 class="fs-500 ff-sans-normal">Hey, welcome back!<br><br></h1>
+
+                <div class="container-flex">
+                    <h1 class="fs-600 ff-sans-normal">Hey, glad you're here.<br><br></h1>
+                </div>
                 <div>
-                    <label class="fs-400" for="username">Email</label>:
+                    <label class="fs-300" for="username">[ email ]</label>
                     <input type="text" id="username" name="username" class="form-control" autofocus="autofocus" placeholder="Username" />
                 </div>
                 <div>
-                    <label class="fs-400" for="password">Password</label>:
+                    <label class="fs-300" for="password">[ password ]</label>
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
-                </div>
-
-                <div>
                     <input class="large-button" type="submit" value="login">
                 </div>
-            </form>
 
-            </div>
-                <h2 class="fs-500 ff-sans-normal"><br>New here?<br>Click the button below to get started!</h2>
-                <a href="/get_started" class="large-button">get started!</a>
+                <div id="new-here" class="fs-600 ff-sans-normal">New here?<br>Click to sign up!</h2>
+                    <a href="/get_started" class="large-button" style="float:right">get started!</a>
+                </div>
+
+            </form>
+        </div>
+
 
         </div>
+    </div>
 
     <!-- JAVASCRIPT -->
     <script type="text/javascript"

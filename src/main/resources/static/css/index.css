@@ -8,7 +8,6 @@
     --clr-red: 7 100% 61%;
     --clr-teal: 180 68% 36%;
     --clr-green: 72 51% 52%;
-    --clr-brown: 40 76% 37%;
     --clr-white: 59, 3%, 99%;
     --clr-purple: 259 80% 76%;
 
@@ -184,7 +183,7 @@ li {
 .bg-red { background-color: hsl( var(--clr-red) ); }
 .bg-purple { background-color: hsl( var(--clr-purple) ); }
 .bg-teal { background-color: hsl( var(--clr-teal) ); }
-.bg-brown { background-color: hsl( var(--clr-brown) ); }
+
 
 .text-black { color: hsl( var(--clr-black) ); }
 .text-white { color: hsl( var(--clr-white) ); }
@@ -192,7 +191,7 @@ li {
 .text-red { color: hsl( var(--clr-red) ); }
 .text-purple { color: hsl( var(--clr-purple) ); }
 .text-teal { color: hsl( var(--clr-teal) ); }
-.text-brown { color: hsl( var(--clr-brown) ); }
+
 
 /* TYPOGRAPHY */
 
