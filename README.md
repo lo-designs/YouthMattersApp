@@ -20,9 +20,14 @@ Youth|Matters is an app to help adolescents/young adults find health & wellness 
 
 ## Daily Progress
 
-- April 18 (70ish ? % done)
+- April 19 (80% done)
+  - finished implementing spring security and registration
+  - created a user account that can be accesses through successful login and registration
+
+- April 18 (~70% done)
   - updated readme file
   - added security and registration
+  - added user (health) resource table
 
 ## User Stories
 
@@ -35,11 +40,11 @@ I want to be able to save my preferences/needs to easily filter through resource
 
 *Scenario:* Given the vast amount of mental health and wellness resources that exist, an app that allows people to search for what they need within specific parameters would make it easier for people to find appropriate help.
 ____________
-2 | As someone who has a hard time keeping track of appointments,
+2 | As someone who has a hard time keeping track of things, I want to be able to find/access resources from one place.
 
 **Allow users to create a secure account to log into to save and quickly access resource information.**
 
-*Scenario:* Given the vast amount of mental health and wellness resources that exist, an app that allows people to search for what they need within specific parameters would make it easier for people to find appropriate help.
+*Scenario:* An account feature would allow users to save their information and preferences, as well as filter out resources they don't need.
 ______________
 3 | As someone without means of transportation,
 I want to find resources that offer remote help,
@@ -48,7 +53,6 @@ so that I do not need to worry about commuting.
 **Allow those using the app to filter results based on whether they can connect to resources in person or remote.**
 
 *Scenario:* Some people do not have local resources or are unable to commute, therefore those users are able to filter by resources that offer services online or over the phone.
-
 
 
 ## Features
@@ -73,13 +77,6 @@ Create an account feature which allows users to:
 ## Schema Diagram
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-
-## Tech Stack
-
-**Client:** React, Redux, TailwindCSS // 
-**Server:** Node, Express
 
 
 ## Technical Challenges
