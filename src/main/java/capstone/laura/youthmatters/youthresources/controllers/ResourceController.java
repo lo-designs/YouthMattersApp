@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
-import java.security.Principal;
+
 
 @Controller
 public class ResourceController {
@@ -38,7 +38,7 @@ public class ResourceController {
     public String showNewResourceForm(Model model) {
         Resource resource = new Resource();
         model.addAttribute("resource", resource);
-        return "all_resources";
+        return "new_resource";
     }
 
    @PostMapping("/saveResource")
@@ -48,7 +48,7 @@ public class ResourceController {
         }
         // SAVE RESOURCE TO DATABASE
        resourceService.saveResource(resource);
-        return "redirect:/";
+        return "all_resources";
    }
 
    @GetMapping("/showFormForUpdate/{id}")
@@ -67,6 +67,6 @@ public class ResourceController {
 
         // CALL DELETE RESOURCE METHOD
        this.resourceService.deleteResourceById(id);
-       return "redirect:/";
+       return "all_resources";
    }
 }

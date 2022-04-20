@@ -57,10 +57,10 @@ public class AppUserController {
         return "get_started";
     }
 
-    @GetMapping("/hotlines")
-    public String hotlines() {
-        return "hotlines";
-    }
+//    @GetMapping("/hotlines")
+//    public String hotlines() {
+//        return "hotlines";
+//    }
 
     @GetMapping("/login")
     public String login() {

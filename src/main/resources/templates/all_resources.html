@@ -13,7 +13,7 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="/css/index.css">
-    <title>Y|M. Resources</title>
+    <title>Y|M Admin | Resources</title>
 </head>
 
 <body>
@@ -33,29 +33,28 @@
     </div>
 </header>
 
-<!-- HOTLINE INFO -->
+<!-- ALL RESOURCES -->
 <div class="container-flex">
     <h1>Resource List</h1>
 
-    <a th:href="@{/showNewResourceForm}" class="large-button"> add a resource > </a>
+    <a th:href="@{/showNewResourceForm}" class="btn btn-primary btn-sm mb-3"> add a resource > </a>
 
-    <table class="table">
+    <table class="table table-striped table-responsive-md">
         <thead>
         <tr>
-            <th>Resource/Organization</th>
+            <th>Resource</th>
             <th>Description</th>
-            <th>Programs</th>
-            <th> Actions</th>
+            <th>Programs/Specifications</th>
         </tr>
         </thead>
         <tbody>
-        <!--/*@thymesVar id="listResources" type=""*/-->
-        <tr th:each="resource : ${allResources}">
+
+        <tr th:each="resource : ${allResources}" >
             <td th:text="${resource.name}"></td>
             <td th:text="${resource.description}"></td>
-            <td th:text="${resource.hours}"></td>
-            <td><a th:href="@{/showFormForUpdate/{id}(id=${resource.id})}" class="btn btn-primary">Update</a>
-                <a th:href="@{/deleteResource/{id}(id=${resource.id})}" class="btn btn-danger">Delete</a>
+<!--            <td th:text="${resource.resourceTags}"></td>-->
+            <td><a th:href="@{/showFormForUpdate/{id}(id=${resource.id})}" class="large-button bg-green">Update</a>
+                <a th:href="@{/deleteResource/{id}(id=${resource.id})}" class="large-button bg-red">Delete</a>
             </td>
         </tr>
         </tbody>

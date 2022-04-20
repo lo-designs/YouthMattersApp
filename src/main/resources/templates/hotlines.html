@@ -41,31 +41,35 @@
             </div>
 
             <!-- HOTLINE LIST -->
-            <section class="table-section">
-                <div class="tbl-header">
-                    <table class="resource-table">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Hours</th>
-                        </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div class="tbl-content">
-                    <table>
-                        <tbody>
-                        <tr th:each="hotline : ${hotlines}">
-                            <td th:text="${hotline.name}"></td>
-                            <td th:text="${hotline.description}"></td>
-                            <td th:text="${hotline.hours}"></td>
+            <div class="container-flex">
+                <section class="table-section">
+                    <div class="tbl-header">
+                        <table class="resource-table">
+                            <thead>
+                            <tr>
+                                <!--                <th>Name</th>-->
+                                <!--                <th>Description</th>-->
+                                <!--                <th>Save Resource</th>-->
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tbl-content">
+                        <table>
+                            <tbody>
+                            <tr th:each="resource : ${resources}">
+                                <td style="font-weight: bolder" th:text="${resource.name}"></td>
+                                <td th:text="${resource.description}"></td>
+                                <td th:text="${resource.hours}"></td>
 
-                            <td><a th:href="@{/deleteHotline/{id}(id=${hotline.id})}" class="large-button fs-400">remove</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                <td><a th:action="@{/addResourceToList/{id}(id=${resource.id})}" method="post" class="large-button fs-400" style="float: right">save this resource</a></td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
 
             <!-- JAVASCRIPT -->
             <script src="js/script.js"></script>
