@@ -34,41 +34,36 @@
     </header>
 
         <!-- HOTLINE INFO -->
-        <div class="container grid">
+        <div class="container">
             <div>
                 <h1 class="fs-700 ff-sans-normal text-black">Hotlines<br></h1>
                 <h1 class="fs-500 ff-sans-normal text-black"><br>If this is an emergency, click here.<br><br></h1>
             </div>
 
-            <!-- HOTLINE LIST -->
-            <div class="container-flex">
-                <section class="table-section">
-                    <div class="tbl-header">
-                        <table class="resource-table">
-                            <thead>
-                            <tr>
-                                <!--                <th>Name</th>-->
-                                <!--                <th>Description</th>-->
-                                <!--                <th>Save Resource</th>-->
-                            </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="tbl-content">
-                        <table>
-                            <tbody>
-                            <tr th:each="resource : ${resources}">
-                                <td style="font-weight: bolder" th:text="${resource.name}"></td>
-                                <td th:text="${resource.description}"></td>
-                                <td th:text="${resource.hours}"></td>
+            <!-- HOTLINE ACCORDION -->
+            <div class="accordion">
+                <label for="a1" class="accordion-item1 bg-purple"><h2>These will be</h2></label>
+                <input type="checkbox" id="a1"/>
+                <p class="hiddentext">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his
+                    bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his
+                    brown belly, slightly domed and divided by arches into stiff sections.</p>
+            </div>
 
-                                <td><a th:action="@{/addResourceToList/{id}(id=${resource.id})}" method="post" class="large-button fs-400" style="float: right">save this resource</a></td>
+            <div class="accordion">
+                <label for="a2" class="accordion-item2 bg-red"><h2>Categorized</h2></label>
+                <input type="checkbox" id="a2"/>
+                <p class="hiddentext">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his
+                    bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his
+                    brown belly, slightly domed and divided by arches into stiff sections.</p>
+            </div>
 
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+            <div class="accordion">
+                <label for="a3" class="accordion-item3 bg-teal"><h2>Hotlines</h2></label>
+                <input type="checkbox" id="a3"/>
+                <p class="hiddentext">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his
+                    bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his
+                    brown belly, slightly domed and divided by arches into stiff sections.</p>
+            </div>
             </div>
 
             <!-- JAVASCRIPT -->

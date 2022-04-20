@@ -495,3 +495,10 @@ input#a3 {
     display: none;
     position: relative;
 }
+
+/* IMAGES (ABOUT PAGE) */
+
+.about-image {
+    background-blend-mode: lighten;
+    z-index: 0;
+}
