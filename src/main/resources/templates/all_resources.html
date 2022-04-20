@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -13,7 +13,7 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="/css/index.css">
-    <title>Account</title>
+    <title>Y|M. Resources</title>
 </head>
 
 <body>
@@ -33,53 +33,34 @@
     </div>
 </header>
 
-<!-- INTRO -->
-<div class="container">
-    <div>
-        <div class="row">
-            <div class="col-9"><h1 class="fs-700 ff-sans-normal text-black">Resources</h1>
-                <h2 class="fs-500 ff-sans-normal text-black"><br>Save and access your resources all from right here.<br></h2>
-                <p class="fs-400 ff-mono text-black">Preferences | Details<br><br></p>
-            </div>
-            <div class="col-3">
-                <div id="preferences"><a href="/account_setup/step_1" class="large-button fs-400 bg-purple">add | update preferences</a></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- RESOURCE LIST -->
+<!-- HOTLINE INFO -->
 <div class="container-flex">
-<section class="table-section">
-    <div class="tbl-header">
-        <table class="resource-table">
-            <thead>
-            <tr>
-<!--                <th>Name</th>-->
-<!--                <th>Description</th>-->
-<!--                <th>Save Resource</th>-->
-            </tr>
-            </thead>
-        </table>
-    </div>
-    <div class="tbl-content">
-        <table>
-            <tbody>
-            <tr th:each="resource : ${resources}">
-                <td style="font-weight: bolder" th:text="${resource.name}"></td>
-                <td th:text="${resource.description}"></td>
-                <td th:text="${resource.hours}"></td>
+    <h1>Resource List</h1>
 
-                <td><a th:action="@{/addResourceToList/{id}(id=${resource.id})}" method="post" class="large-button fs-400" style="float: right">save this resource</a></td>
+    <a th:href="@{/showNewResourceForm}" class="large-button"> add a resource > </a>
 
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Resource/Organization</th>
+            <th>Description</th>
+            <th>Programs</th>
+            <th> Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--/*@thymesVar id="listResources" type=""*/-->
+        <tr th:each="resource : ${allResources}">
+            <td th:text="${resource.name}"></td>
+            <td th:text="${resource.description}"></td>
+            <td th:text="${resource.hours}"></td>
+            <td><a th:href="@{/showFormForUpdate/{id}(id=${resource.id})}" class="btn btn-primary">Update</a>
+                <a th:href="@{/deleteResource/{id}(id=${resource.id})}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-
 
 <!-- JAVASCRIPT -->
 <script src="js/script.js"></script>

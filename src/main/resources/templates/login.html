@@ -46,7 +46,8 @@
             <form id="login-form" th:action="@{/login}" method="post">
 
                 <div class="container-flex">
-                    <h1 class="fs-600 ff-sans-normal">Hey, glad you're here.<br><br></h1>
+                    <h1 class="fs-600 ff-mono">Hey, glad you're here.<br><br></h1>
+                    <h1 class="fs-500 ff-sans-normal">Sign into your account:<br></h1>
                 </div>
                 <div>
                     <label class="fs-300" for="username">[ email ]</label>
@@ -55,13 +56,8 @@
                 <div>
                     <label class="fs-300" for="password">[ password ]</label>
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
-                    <input class="large-button" type="submit" value="login">
+                    <input class="large-button bg-red" type="submit" value="login">
                 </div>
-
-                <div id="new-here" class="fs-600 ff-sans-normal">New here?<br>Click to sign up!</h2>
-                    <a href="/get_started" class="large-button" style="float:right">get started!</a>
-                </div>
-
             </form>
         </div>
 

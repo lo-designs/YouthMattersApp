@@ -267,7 +267,7 @@ li {
     justify-content: space-evenly;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 30%;
     height: 100vh;
     border: 3px solid #212121;
     border-radius: 25px;
@@ -326,6 +326,7 @@ header.active .close {
     padding: 5%;
     border: 3px solid #212121;
     border-radius: 20px;
+    background-color: var(--clr-purple);
 }
 
 /* SIGN UP PAGE FILTER BUTTONS */
@@ -400,28 +401,34 @@ header.active .close {
 }
 
 
+
 /* RESOURCES/HOTLINES TABLE */
 
 
 .resource-table {
     display: inline-flex;
-    width:100%;
+    width: 100%;
     table-layout: fixed;
-    border: 1px solid #212121;
-    border-radius: 20px;
+    /*border: 1px solid #212121;*/
+    /*border-radius: 20px;*/
+
 }
 
 .tbl-content {
-    height:300px;
-    overflow-x:auto;
-    margin-top: 0px;
-    /*border: 1px solid #AAC347;*/
+    display: inline-flex;
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid #212121;
+    height: 50vh;
+    overflow-x: auto;
+    border-radius: 20px;
 }
 
 th {
-    align-content: center;
-    padding: 10px 40px;
-    text-align: left;
+    align-content: space-between;
+    width: 100%;
+    /*padding: 10%;*/
+    text-align: right;
     font-weight: 400;
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
@@ -431,7 +438,7 @@ th {
 
 td {
     align-content: space-between;
-    padding: 10px 40px;
+    padding: 40px 45px;
     text-align: left;
     vertical-align:middle;
     font-weight: 400;
@@ -441,6 +448,15 @@ td {
     border-bottom: solid 1px #212121;
 }
 
+
+/* LANDING PAGE STEPS */
+
+/*#steps {*/
+/*    border: 2px solid #212121;*/
+/*    border-radius: 20px;*/
+/*    background-color: #AAC347;*/
+/*    padding: 5%;*/
+/*}*/
 
 /* HOTLINES ACCORDION */
 
