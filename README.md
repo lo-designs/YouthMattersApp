@@ -2,9 +2,8 @@
 
 ## Health & wellness app for adolescents/young adults.
 
-Youth|Matters is an app to help adolescents/young adults find health & wellness resources. The main objective of the app is to help users filter through resources in order to find the ones that best fit their needs. The user can create an account to save their specifications & preferences, and the app will "recommend" resources based on what the user selects.
+Youth|Matters is an app to help adolescents/young adults find health & wellness resources. The main purpose of the app is to help users filter through resources in order to find the ones that best fit their needs; to do so, the user can create an account to save their specifications & preferences, and the app will "recommend" resources based on what the user selects.
 
-###Future Implementation:
 ___________
 
 ## Table of Contents
@@ -16,9 +15,10 @@ ___________
 - [Schema Diagram](#schema-diagram)
 - [Technical Challenges](#technical-challenges)
 - [Learning Experience](#what-i-have-learned)
+- [Future Implementation](#future-implementation)
 - [Acknowledgments](#acknowledgements)
 
-________
+___________
 
 ## Daily Progress
 
@@ -39,10 +39,9 @@ ________
   - added security and registration
   - added user (health) resource table
 
+___________
+
 ## User Stories
-
-
-#### USER
 
 1 | As someone looking for health and wellness resources,
 I want to be able to save my preferences/needs to easily filter through resources, so that I can connect with the appropriate places.
@@ -67,6 +66,7 @@ so that I do not need to worry about commuting.
 
 *Scenario:* Some people do not have local resources or are unable to commute, therefore those users are able to filter by resources that offer services online or over the phone.
 
+___________
 
 ## Features
 
@@ -99,8 +99,12 @@ Create an account feature which allows users to:
 
 ## What I have learned:
 
-- I have learned a lot throughout this project. One of the biggest lessons was how to prioritize my time and stay focused on the MVP (and not getting hung up on minor details).
+- I have learned a lot throughout this project. One of the biggest lessons was how to prioritize my time and stay focused on the MVP (and not get hung up on minor details). Through this process I also learned how necessary (and important!) it is to ask for help when unsure of things. And how to google better (sort of).
 
+## Future Implementation: 
+
+While this app can find appropriate resources based on selections the user makes, I also would like to further filter based on age and location. 
+In addition to filtering through resources to find the best fit, ideally the user would also be able to save, contact, schedule appointments, and correspond with their saved resources all within the app. I would also love to do more with the design.
 
 ## Acknowledgements
 
