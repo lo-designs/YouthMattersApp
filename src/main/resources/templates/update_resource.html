@@ -23,12 +23,13 @@
     <div class="menu" onclick="toggle()">menu</div>
     <div class="close" onclick="toggle()">close</div>
 
-    <div class="nav bg-purple">
+    <div class="nav bg-green">
         <ul class="nav-links">
             <li><a href="/login"><span aria-hidden="true"></span>Login</a>
             <li><a href="/get_started"><span aria-hidden="true"></span>Sign up!</a>
             <li><a href="/about"><span aria-hidden="true"></span>About</a>
             <li><a href="/hotlines"><span aria-hidden="true"></span>Hotlines</a>
+            <li><a href="/all_resources"><span aria-hidden="true"></span>Resources</a>
         </ul>
     </div>
 </header>
@@ -48,9 +49,9 @@
 
         <input type="text" placeholder="[ description ]" th:field="*{description}" class="form-control mb-4 col-4">
 
-<!--        <input type="text" placeholder="[ tags ]" th:field="*{resourceTags}" class="form-control mb-4 col-4">-->
+        <input type="text" placeholder="[ programs ]" th:field="*{programs}" class="form-control mb-4 col-4">
 
-        <button type="submit" class="btn btn-info col-2"> Update Resource</button>
+        <button type="submit" class="btn btn-info col-2 bg-teal"> Update Resource</button>
     </form>
 
     <hr>

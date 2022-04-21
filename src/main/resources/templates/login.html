@@ -24,16 +24,18 @@
         <div class="menu" onclick="toggle()">menu</div>
         <div class="close" onclick="toggle()">close</div>
 
-        <div class="nav bg-purple">
+        <div class="nav bg-green">
             <ul class="nav-links">
-                <li><a href="/login">Login</a>
-                <li><a href="/get_started">Sign up!</a>
-                <li><a href="/about">About</a>
-                <li><a href="/hotlines">Hotlines</a>
+                <li><a href="/login"><span aria-hidden="true"></span>Login</a>
+                <li><a href="/get_started"><span aria-hidden="true"></span>Sign up!</a>
+                <li><a href="/about"><span aria-hidden="true"></span>About</a>
+                <li><a href="/hotlines"><span aria-hidden="true"></span>Hotlines</a>
+                <li><a href="/all_resources"><span aria-hidden="true"></span>Resources</a>
             </ul>
         </div>
     </header>
 
+    <!-- LOGIN -->
         <div>
             <div th:if="${param.error}">
                 Invalid username and password.
@@ -48,7 +50,7 @@
 
                 <div class="container-flex">
                     <h1 class="fs-600 ff-mono">Hey, glad you're here.<br><br></h1>
-                    <h1 class="fs-500 ff-sans-normal">Sign into your account:<br></h1>
+                    <h1 class="fs-400 ff-sans-normal">Sign into your account:<br></h1>
                 </div>
                 <div>
                     <label class="fs-300" for="username">[ email ]</label>

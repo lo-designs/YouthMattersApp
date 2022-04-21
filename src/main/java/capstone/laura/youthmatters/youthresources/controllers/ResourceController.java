@@ -44,11 +44,11 @@ public class ResourceController {
    @PostMapping("/saveResource")
     public String saveResource(@ModelAttribute("resource") @Valid Resource resource, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "all_resources";
+            return "new_resource";
         }
         // SAVE RESOURCE TO DATABASE
        resourceService.saveResource(resource);
-        return "all_resources";
+        return "redirect:/all_resources";
    }
 
    @GetMapping("/showFormForUpdate/{id}")
@@ -67,6 +67,6 @@ public class ResourceController {
 
         // CALL DELETE RESOURCE METHOD
        this.resourceService.deleteResourceById(id);
-       return "all_resources";
+       return "redirect:/all_resources";
    }
 }

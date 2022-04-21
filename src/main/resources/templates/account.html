@@ -23,12 +23,13 @@
     <div class="menu" onclick="toggle()">menu</div>
     <div class="close" onclick="toggle()">close</div>
 
-    <div class="nav bg-purple">
+    <div class="nav bg-green">
         <ul class="nav-links">
             <li><a href="/login"><span aria-hidden="true"></span>Login</a>
             <li><a href="/get_started"><span aria-hidden="true"></span>Sign up!</a>
             <li><a href="/about"><span aria-hidden="true"></span>About</a>
             <li><a href="/hotlines"><span aria-hidden="true"></span>Hotlines</a>
+            <li><a href="/all_resources"><span aria-hidden="true"></span>Resources</a>
         </ul>
     </div>
 </header>
@@ -67,10 +68,10 @@
         <table>
             <tbody>
             <tr th:each="resource : ${resources}">
-                <td style="font-weight: bolder" th:text="${resource.name}"></td>
+                <td style="font-weight: bolder" th:text="${name}"></td>
                 <td th:text="${resource.description}"></td>
-                <td th:text="${resource.hours}"></td>
-
+                <!--/*@thymesVar id="programs" type=""*/-->
+                <td th:text="${resource.programs}"></td>
                 <td><a th:action="@{/addResourceToList/{id}(id=${resource.id})}" method="post" class="large-button fs-400" style="float: right">save this resource</a></td>
 
             </tr>

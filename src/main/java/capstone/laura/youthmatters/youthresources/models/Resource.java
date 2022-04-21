@@ -11,8 +11,7 @@ public class Resource {
     private long id;
     private String name;
     private String description;
-    private String ageRange;
-    private String hours;
+    private String programs;
     private String location;
     @ManyToMany(targetEntity = ResourceTag.class)
     private Set<ResourceTag> resourceTags;
@@ -44,20 +43,12 @@ public class Resource {
         this.description = description;
     }
 
-    public String getAgeRange() {
-        return ageRange;
+    public String getPrograms() {
+        return programs;
     }
 
-    public void setAgeRange(String ageRange) {
-        this.ageRange = ageRange;
-    }
-
-    public String getHours() {
-        return hours;
-    }
-
-    public void setHours(String hours) {
-        this.hours = hours;
+    public void setPrograms(String programs) {
+        this.programs = programs;
     }
 
     public String getLocation() {
