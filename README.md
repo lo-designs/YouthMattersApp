@@ -83,12 +83,12 @@ Create an account feature which allows users to:
 
 ## Technical Challenges
 
-- What were all of my technical challenges?
+- The majority of challenges I had with this project were with backend technologies. Some specific challenges included:
 
 
 ## What I have learned:
 
-- What I have learned:
+- I have learned a lot throughout this project. One of the biggest lessons was how to prioritize my time and stay focused on the MVP, (and not getting hung up on the little details).
 
 
 ## Acknowledgements
