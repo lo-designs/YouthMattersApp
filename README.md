@@ -92,7 +92,7 @@ Create an account feature which allows users to:
 
 ## What I have learned:
 
-- I have learned a lot throughout this project. One of the biggest lessons was how to prioritize my time and stay focused on the MVP (and not getting hung up on the little details).
+- I have learned a lot throughout this project. One of the biggest lessons was how to prioritize my time and stay focused on the MVP (and not getting hung up on minor details).
 
 
 ## Acknowledgements
