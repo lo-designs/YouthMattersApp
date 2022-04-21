@@ -68,7 +68,7 @@ Create an account feature which allows users to:
 
 ## Technical Architecture
 
-![App Screenshot]()
+![App Screenshot](https://github.com/lo-designs/Gunther_Laura_Capstone/blob/main/capstone_tech_stack.jpg)
 
 
 ## Wireframes
