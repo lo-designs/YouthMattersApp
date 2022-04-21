@@ -20,7 +20,7 @@ Youth|Matters is an app to help adolescents/young adults find health & wellness 
 
 - April 20 (85% done)
   - updated CRUD operations to work with the app (will be for admin purposes)
-  _ updated the database (resources and resource tags)
+  - updated the database (resources and resource tags)
 
 - April 19 (80% done)
   - finished implementing spring security and registration
