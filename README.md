@@ -1,4 +1,4 @@
-# Youth|Matters. [Capstone]
+# Youth|Matters [Capstone]
 
 ## Health & wellness app for adolescents/young adults.
 
