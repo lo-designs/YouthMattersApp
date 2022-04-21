@@ -93,5 +93,5 @@ Create an account feature which allows users to:
 
 ## Acknowledgements
 
-- My awesome instructor & cohort-mates.
-  [ Special shout-out to Luis Morales Marquez! ]
+- My awesome instructor, Sang Shin & cohort-mates.
+  [ Special shout-out to Luis Morales Marquez & Supamas Supamas Sirichotiyakul! ]
