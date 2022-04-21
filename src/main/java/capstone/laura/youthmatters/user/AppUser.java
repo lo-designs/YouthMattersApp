@@ -1,8 +1,8 @@
 package capstone.laura.youthmatters.user;
 
 import capstone.laura.youthmatters.security.Role;
-import capstone.laura.youthmatters.youthresources.models.ResourceTag;
-import capstone.laura.youthmatters.youthresources.models.Resource;
+import capstone.laura.youthmatters.youth.resources.models.ResourceTag;
+import capstone.laura.youthmatters.youth.resources.models.Resource;
 
 import javax.persistence.*;
 import java.util.Collection;

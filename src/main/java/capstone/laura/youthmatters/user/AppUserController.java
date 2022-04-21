@@ -1,9 +1,9 @@
 package capstone.laura.youthmatters.user;
 
-import capstone.laura.youthmatters.youthresources.models.Resource;
-import capstone.laura.youthmatters.youthresources.models.ResourceTag;
-import capstone.laura.youthmatters.youthresources.services.ResourceService;
-import capstone.laura.youthmatters.youthresources.services.ResourceTagService;
+import capstone.laura.youthmatters.youth.resources.models.Resource;
+import capstone.laura.youthmatters.youth.resources.models.ResourceTag;
+import capstone.laura.youthmatters.youth.resources.services.ResourceService;
+import capstone.laura.youthmatters.youth.resources.services.ResourceTagService;
 import capstone.laura.youthmatters.security.AppUserDetailsService;
 import capstone.laura.youthmatters.security.AppUserDto;
 import org.springframework.beans.factory.annotation.Autowired;
