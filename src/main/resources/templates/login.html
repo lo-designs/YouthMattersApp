@@ -43,7 +43,8 @@
             </div>
 
         <div class="row">
-            <form id="login-form" th:action="@{/login}" method="post">
+            <div class="custom-form">
+            <form th:action="@{/login}" method="post">
 
                 <div class="container-flex">
                     <h1 class="fs-600 ff-mono">Hey, glad you're here.<br><br></h1>
@@ -56,9 +57,10 @@
                 <div>
                     <label class="fs-300" for="password">[ password ]</label>
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
-                    <input class="large-button bg-red" type="submit" value="login">
+                    <input class="large-button bg-teal fs-500" type="submit" value="login">
                 </div>
             </form>
+            </div>
         </div>
 
 

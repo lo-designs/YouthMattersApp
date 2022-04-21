@@ -41,7 +41,7 @@
 <div class="container">
 <form id="form" th:action="@{/{url}(url=${url})}" method="POST">
     <label>
-        <select th:each="tag, i : ${tags}" th:name="'ids[' + ${i.index} + ']'" class="custom-select" multiple>
+        <select id="select-filters" th:each="tag, i : ${tags}" th:name="'ids[' + ${i.index} + ']'" class="custom-select" multiple>
             <option th:text="${tag.type}" th:value="${tag.id}" th:name="${tag.id}"></option>
         </select>
     </label>

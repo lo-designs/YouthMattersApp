@@ -37,24 +37,16 @@
 <div class="container-flex">
     <h1>Resource List</h1>
 
-    <a th:href="@{/showNewResourceForm}" class="btn btn-primary btn-sm mb-3"> add a resource > </a>
+    <a th:href="@{/showNewResourceForm}" class="btn btn-default mb-3 bg-green"> ADD NEW RESOURCE </a>
 
-    <table class="table table-striped table-responsive-md">
-        <thead>
-        <tr>
-            <th>Resource</th>
-            <th>Description</th>
-            <th>Programs/Specifications</th>
-        </tr>
-        </thead>
+    <table class="table-bordered table-responsive">
         <tbody>
-
         <tr th:each="resource : ${allResources}" >
-            <td th:text="${resource.name}"></td>
+            <td style="font-weight: bolder" th:text="${resource.name}"></td>
             <td th:text="${resource.description}"></td>
 <!--            <td th:text="${resource.resourceTags}"></td>-->
-            <td><a th:href="@{/showFormForUpdate/{id}(id=${resource.id})}" class="large-button bg-green">Update</a>
-                <a th:href="@{/deleteResource/{id}(id=${resource.id})}" class="large-button bg-red">Delete</a>
+            <td><a th:href="@{/showFormForUpdate/{id}(id=${resource.id})}" class="btn btn-default mb-3 bg-purple">UPDATE</a>
+                <a th:href="@{/deleteResource/{id}(id=${resource.id})}" class="btn btn-default mb-3 bg-red">DELETE</a>
             </td>
         </tr>
         </tbody>

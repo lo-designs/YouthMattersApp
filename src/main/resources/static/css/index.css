@@ -310,28 +310,11 @@ header.active .close {
     opacity: 0;
 }
 
-/* USER ACCOUNT LIST TABLE */
 
-/*#account-list {*/
-/*    width: 100%;*/
-/*    border: 2px solid #212121;*/
-/*    border-radius: 25px;*/
-/*    padding: 15%;*/
-/*}*/
-
-
-/* LOGIN FORM */
-
-#login-form {
-    padding: 5%;
-    border: 3px solid #212121;
-    border-radius: 20px;
-    background-color: var(--clr-purple);
-}
 
 /* SIGN UP PAGE FILTER BUTTONS */
 
-.select {
+#select-filters {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3%;
@@ -339,7 +322,7 @@ header.active .close {
     width: 100%;
 }
 
-.select__item {
+#select-filters__item {
     padding: 7%;
     border: 2px solid #212121;
     line-height: 1em;
@@ -347,13 +330,26 @@ header.active .close {
     cursor: pointer;
 }
 
-.select__item:hover {
+#select-filters__item:hover {
     background-color: #AAC347;
 }
 
-.select__item--selected {
+#select-filters__item--selected {
     background-color: #AAC347;
 }
+
+
+/* SAVE/DELETE/ BUTTON */
+
+#update-button,
+#delete-button {
+    padding: 15%;
+}
+
+#add-button {
+    padding: 1%;
+}
+
 
 /* 3D BUTTON */
 
@@ -362,10 +358,11 @@ header.active .close {
     place-items: center;
     margin-top: 3%;
     aspect-ratio: 2 / 1;
-    padding: 3%;
+    padding: 5%;
     border-radius: 20px;
     font-family: var(--ff-mono);
     color: var(--clr-black);
+    line-height: 1em;
     border: 2px solid #212121;
     box-shadow: 12px 12px 0,
                 14px 14px 0,
@@ -401,17 +398,22 @@ header.active .close {
 }
 
 
+/* LOGIN/SIGNUP FORM */
+
+.custom-form {
+    border: 2px solid #212121;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+
 
 /* RESOURCES/HOTLINES TABLE */
-
 
 .resource-table {
     display: inline-flex;
     width: 100%;
     table-layout: fixed;
-    /*border: 1px solid #212121;*/
-    /*border-radius: 20px;*/
-
 }
 
 .tbl-content {
@@ -466,10 +468,6 @@ td {
     padding: 3%;
     line-height: .5em;
     cursor: pointer;
-}
-
-.accordion label:hover {
-    background-color: #AAC347;
 }
 
 .accordion p {
