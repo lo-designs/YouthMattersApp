@@ -2,7 +2,10 @@
 
 ## Health & wellness app for adolescents/young adults.
 
-Youth|Matters is an app to help adolescents/young adults find health & wellness resources based on factors like age, location, and preferences. Users can save and access those resources directly from the app.
+Youth|Matters is an app to help adolescents/young adults find health & wellness resources. The main objective of the app is to help users filter through resources in order to find the ones that best fit their needs. The user can create an account to save their specifications & preferences, and the app will "recommend" resources based on what the user selects.
+
+###Future Implementation:
+___________
 
 ## Table of Contents
 - [Daily Progress](#daily-progress)
@@ -15,6 +18,7 @@ Youth|Matters is an app to help adolescents/young adults find health & wellness 
 - [Learning Experience](#what-i-have-learned)
 - [Acknowledgments](#acknowledgements)
 
+________
 
 ## Daily Progress
 
