@@ -28,7 +28,7 @@ Youth|Matters is an app to help adolescents/young adults find health & wellness 
 
 - April 19 (80% done)
   - finished implementing spring security and registration
-  - created a user account that can be accesses through successful login and registration
+  - created a user account that can be accessed through successful login and registration
 
 - April 18 (~70% done)
   - updated readme file
@@ -39,6 +39,7 @@ Youth|Matters is an app to help adolescents/young adults find health & wellness 
 
 
 #### USER
+
 1 | As someone looking for health and wellness resources,
 I want to be able to save my preferences/needs to easily filter through resources, so that I can connect with the appropriate places.
 
@@ -46,12 +47,14 @@ I want to be able to save my preferences/needs to easily filter through resource
 
 *Scenario:* Given the vast amount of mental health and wellness resources that exist, an app that allows people to search for what they need within specific parameters would make it easier for people to find appropriate help.
 ____________
+
 2 | As someone who has a hard time keeping track of things, I want to be able to find/access resources from one place.
 
 **Allow users to create a secure account to log into to save and quickly access resource information.**
 
 *Scenario:* An account feature would allow users to save their information and preferences, as well as filter out resources they don't need.
 ______________
+
 3 | As someone without means of transportation,
 I want to find resources that offer remote help,
 so that I do not need to worry about commuting.
@@ -98,4 +101,4 @@ Create an account feature which allows users to:
 ## Acknowledgements
 
 - My awesome instructor, Sang Shin, & cohort-mates.
-  [ Special shout-out to Luis Morales Marquez & Supamas Sirichotiyakul! ]
+  [ + Special shout-out to Luis Morales Marquez & Supamas Sirichotiyakul! ]
