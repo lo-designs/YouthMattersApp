@@ -100,5 +100,5 @@ Create an account feature which allows users to:
 
 ## Acknowledgements
 
-- My awesome instructor, Sang Shin, & cohort-mates.
+- My awesome instructor, Sang Shin, t.a. Marlin Viverette, and cohort-mates.
   [ + Special shout-out to Luis Morales Marquez & Supamas Sirichotiyakul! ]
