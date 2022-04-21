@@ -78,7 +78,7 @@ Create an account feature which allows users to:
 
 ## Schema Diagram
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/lo-designs/Gunther_Laura_Capstone/blob/main/capstone_db_schema.jpg)
 
 
 ## Technical Challenges
