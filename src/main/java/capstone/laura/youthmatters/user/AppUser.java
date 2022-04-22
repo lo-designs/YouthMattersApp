@@ -50,34 +50,6 @@ public class AppUser {
                 '}';
     }
 
-    public AppUser() {
-    }
-
-    public AppUser(String firstName, String lastName, String email, String password, int age, int zipcode, Set<ResourceTag> tags, Set<Resource> resources, Set<Role> roles) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.age = age;
-        this.zipcode = zipcode;
-        this.tags = tags;
-        this.resources = resources;
-        this.roles = roles;
-    }
-    public AppUser(String firstName, String lastName, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-    }
-
-    public AppUser(String firstName, String lastName, String email, String password, Collection<Role> roles) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.roles = roles;
-    }
 
     public long getId() {
         return id;
