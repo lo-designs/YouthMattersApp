@@ -1,4 +1,4 @@
-package capstone.laura.youthmatters.users.models;
+package capstone.laura.youthmatters.security;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Role {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
 
@@ -38,6 +38,9 @@ public class Role {
 
     @Override
     public String toString() {
-        return null;
+        return "Role{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
