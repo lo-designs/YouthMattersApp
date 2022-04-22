@@ -22,19 +22,19 @@ ___________
 
 ## Daily Progress
 
-- April 21 (90% done)
+April 21 (90% done)
   - started testing and custom queries (still have to finish)
   - updated readme
 
-- April 20 (85% done)
+April 20 (85% done)
   - updated CRUD operations to work with the app (will be for admin purposes)
   - updated the database (resources and resource tags)
 
-- April 19 (80% done)
+April 19 (80% done)
   - finished implementing spring security and registration
   - created a user account that can be accessed through successful login and registration
 
-- April 18 (~70% done)
+April 18 (~70% done)
   - updated readme file
   - added security and registration
   - added user (health) resource table
@@ -89,12 +89,12 @@ Create an account feature which allows users to:
 
 ## Technical Challenges
 
-- The majority of challenges I had with this project were with backend technologies. Some specific challenges included:
+The majority of challenges I had with this project were with backend technologies. Some specific challenges included:
 
 
 ## What I have learned:
 
-- I have learned a lot throughout this project. One of the biggest lessons was how to prioritize my time and stay focused on the MVP (and not get hung up on minor details). Through this process I also learned how necessary (and important!) it is to ask for help when unsure of things. And how to google better (sort of).
+I have learned a lot throughout this project. One of the biggest lessons was how to prioritize my time and stay focused on the MVP (and not get hung up on minor details). Through this process I also learned how necessary (and important!) it is to ask for help when unsure of things. And how to google better (sort of).
 
 ## Future Implementation: 
 
