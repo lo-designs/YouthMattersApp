@@ -22,7 +22,7 @@ ___________
 
 ## Daily Progress
 
-**April 21 (90% done)**
+**April 21 (~90% done)**
   - started testing and custom queries (still have to finish)
   - updated readme
 
@@ -39,6 +39,7 @@ ___________
   - added security and registration
   - added user (health) resource table
 
+(
 ___________
 
 ## User Stories
