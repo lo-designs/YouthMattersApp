@@ -104,5 +104,5 @@ In addition to filtering through resources to find the best fit, ideally the use
 
 ## Acknowledgements
 
-- My awesome instructor, Sang Shin, t.a. Marlin Viverette, and cohort-mates.
-  [ + Special shout-out to Luis Morales Marquez & Supamas Sirichotiyakul! ]
+My awesome instructor, Sang Shin, t.a. Marlin Viverette, and cohort-mates.
+> + Special shout-out to Luis Morales Marquez & Supamas Sirichotiyakul! 
