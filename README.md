@@ -39,7 +39,7 @@ ___________
   - added security and registration
   - added user (health) resource table
 
-![Case Study Rubrics:](https://github.com/lo-designs/YouthMattersApp/blob/main/Laura%20Gunther%20Case%20Study%20(Capstone)%20-%20Rubrics.pdf)
+![Case Study Rubrics](https://github.com/lo-designs/YouthMattersApp/blob/main/Laura%20Gunther%20Case%20Study%20(Capstone)%20-%20Rubrics.pdf)
 ___________
 
 ## User Stories
