@@ -94,7 +94,7 @@ The majority of challenges I had with this project were with backend technologie
 
 ## What I have learned:
 
-I have learned a lot throughout this project. One of the biggest lessons was how to prioritize my time and stay focused on the MVP (and not get hung up on minor details). Through this process I also learned how necessary (and important!) it is to ask for help when unsure of things. And how to google better (sort of).
+I have learned a lot throughout this project. One takeaway was how to better prioritize my time and stay focused on the MVP (and not get hung up on minor details). Through this process I also learned how necessary (and important!) it is to ask for help when unsure of things. And how to google better (sort of).
 
 ## Future Implementation: 
 
