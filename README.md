@@ -85,7 +85,7 @@ Create an account feature which allows users to:
 
 ## Technical Architecture
 
-![App Screenshot](https://github.com/lo-designs/Gunther_Laura_Capstone/blob/main/capstone_tech_stack.jpg)
+![App Screenshot](https://github.com/lo-designs/YouthMattersApp/blob/main/techStack.png)
 
 
 ## Technical Challenges
