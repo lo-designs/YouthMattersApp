@@ -22,11 +22,12 @@ ___________
 
 ## Daily Progress
 
-**April 24th (92% done)**
+**April 24th (95% done)**
 - added sorting to resource table (by name and program)
+- finished testing
 
 **April 22 (~90% done)**
-- started adding custom queries
+- added custom queries
 - continued testing(still in progress)
 
 **April 21 (87% done)**
