@@ -8,8 +8,6 @@ public interface AppUserService {
     AppUser getUserById(long id);
     AppUser findUserByEmail(String email);
 
-//    static List<AppUser> getAllAppUsers() {
-//        return null;
-//    }
+
 
 }

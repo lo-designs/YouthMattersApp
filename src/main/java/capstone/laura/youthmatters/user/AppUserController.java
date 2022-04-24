@@ -57,9 +57,9 @@ public class AppUserController {
         return "get_started";
     }
 
-    @GetMapping("/hotlines")
-    public String hotlines() {
-        return "hotlines";
+    @GetMapping("/helplines")
+    public String helplines() {
+        return "helplines";
     }
 
     @GetMapping("/login")

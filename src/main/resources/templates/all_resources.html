@@ -28,7 +28,7 @@
             <li><a href="/login"><span aria-hidden="true"></span>Login</a>
             <li><a href="/get_started"><span aria-hidden="true"></span>Sign up!</a>
             <li><a href="/about"><span aria-hidden="true"></span>About</a>
-            <li><a href="/hotlines"><span aria-hidden="true"></span>Hotlines</a>
+            <li><a href="/helplines"><span aria-hidden="true"></span>Helplines</a>
             <li><a href="/all_resources"><span aria-hidden="true"></span>Resources</a>
         </ul>
     </div>
@@ -36,20 +36,20 @@
 
 <!-- ALL RESOURCES -->
 <div class="container-flex">
-    <table id="all-resources-table">
     <div>
         <h1>Resource List</h1>
             <a th:href="@{/showNewResourceForm}" class="btn btn-default mb-3 bg-green"> ADD NEW RESOURCE </a>
     </div>
 
-    <div class="table-bordered table-responsive">
-        <tr>
+    <table id="all-resources-table" class="table-responsive">
+
+        <tr class="bg-teal">
             <th onclick="sortTable(0)" class="col-sm-3">Organization <span class="fs-400">🡦</span></th>
             <th onclick="sortTable(1)" class="col-sm-3">Programs <span class="fs-400">🡦</span></th>
             <th>Description</th>
             <th></th>
         </tr>
-        <tbody>
+
         <tr th:each="resource : ${allResources}" >
             <td style="font-weight: bolder" th:text="${resource.name}"></td>
             <td th:text="${resource.programs}"></td>
@@ -58,10 +58,10 @@
                 <a th:href="@{/deleteResource/{id}(id=${resource.id})}" class="btn btn-default mb-3 bg-red">DELETE</a>
             </td>
         </tr>
-        </tbody>
-    </div>
-    </div>
+
+    </table>
 </div>
+
 
 <!-- JAVASCRIPT -->
 <script src="js/script.js"></script>

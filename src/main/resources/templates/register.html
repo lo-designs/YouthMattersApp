@@ -28,7 +28,7 @@
                 <li><a href="/login"><span aria-hidden="true"></span>Login</a>
                 <li><a href="/get_started"><span aria-hidden="true"></span>Sign up!</a>
                 <li><a href="/about"><span aria-hidden="true"></span>About</a>
-                <li><a href="/hotlines"><span aria-hidden="true"></span>Hotlines</a>
+                <li><a href="/helplines"><span aria-hidden="true"></span>Helplines</a>
                 <li><a href="/all_resources"><span aria-hidden="true"></span>Resources</a>
             </ul>
         </div>
@@ -43,10 +43,10 @@
 
             <div>
                 <h1 class="fs-500 ff-sans-normal text-black">Some general info</h1>
-                <h2 class="fs-400 ff-mono text-black"><br>[ filling out this form allows us to sift through resources based on your age and location. ] <br><br><br></h2>
+                <h2 class="fs-400 ff-mono text-black"><br>[ Filling out this form allows us to sift through resources based on your age and location. ] <br><br></h2>
             </div>
 
-        <div class="form">
+        <div class="register-form">
             <form th:action="@{/register}" th:object="${appUser}" id="signupForm" class="row g-3 needs-validation" method="POST">
 
                 <!-- ERROR MESSAGE -->
@@ -58,7 +58,7 @@
                 <div class="row">
                 <div class="col-md-4">
                     <div class="form-group" th:classappend="${#fields.hasErrors('firstName')}? 'has-error':''">
-                    <label for="firstName" class="control-label">[ first name ]</label>
+                    <label for="firstName" class="control-label">first name</label>
                             <input id="firstName" class="form-control" th:field="*{firstName}" />
                         <p class="error-message" th:each="error: ${#fields.errors('firstName')}" th:text="${error}">Validation error</p>
                     </div>
@@ -66,7 +66,7 @@
 
                 <div class="col-md-4">
                     <div class="form-group" th:classappend="${#fields.hasErrors('lastName')}? 'has-error':''">
-                    <label for="lastName" class="control-label">[ last name ]</label>
+                    <label for="lastName" class="control-label">last name</label>
                             <input id="lastName" class="form-control" th:field="*{lastName}" />
                         <p class="error-message" th:each="error : ${#fields.errors('lastName')}" th:text="${error}">Validation error</p>
                     </div>
@@ -74,7 +74,7 @@
 
                  <div class="col-md-4"
                      th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
-                    <label for="email" class="control-label">[ email ]</label> <input
+                    <label for="email" class="control-label">email</label> <input
                         id="email" class="form-control" th:field="*{email}" />
                     <p class="error-message" th:each="error : ${#fields.errors('email')}" th:text="${error}">Validation
                         error</p>
@@ -87,14 +87,14 @@
                 <div class="col-md-6">
                     <div class="form-group"
                          th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
-                        <label for="password" class="control-label">[ create password ]</label>
+                        <label for="password" class="control-label">create password</label>
                             <input id="password" class="form-control" type="password" th:field="*{password}" />
                         <p class="error-message" th:each="error : ${#fields.errors('password')}" th:text="${error}">Validation error</p>
                     </div>
                 </div>
 
                 <div class="col-md-6">
-                    <label for="confirmPassword" class="control-label">[ confirm password ]</label>
+                    <label for="confirmPassword" class="control-label">confirm password</label>
                     <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="password"  th:field="*{confirmPassword}" class="form-control" id="confirmPassword" aria-describedby="inputGroupPrepend" required>
@@ -106,13 +106,13 @@
                 <!-- AGE / LOCATION -->
                 <div class="row">
                 <div class="col-md-4">
-                    <label for="age" class="form-label">[ age ]</label>
+                    <label for="age" class="form-label">age</label>
                     <input type="text" th:field="*{age}" class="form-control" id="age" required>
                     <div class="invalid-feedback">Please provide your age.</div>
                 </div>
 
                 <div class="col-md-4">
-                    <label for="zipCode" class="form-label">[ zip ]</label>
+                    <label for="zipCode" class="form-label">zip</label>
                     <input type="text" th:field="*{zipcode}" class="form-control" id="zipCode" required>
                     <div class="invalid-feedback">Please provide a valid zip.</div>
                 </div>

@@ -1,10 +1,10 @@
-package capstone.laura.youthmatters.hotlines;
+package capstone.laura.youthmatters.helplines;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class Hotline {
+public class Helpline {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,10 +12,10 @@ public class Hotline {
     private String name;
     private String description;
     private String hours;
-    @ManyToMany(targetEntity = Hotline.class)
-    private Set<Hotline> hotlines;
+    @ManyToMany(targetEntity = Helpline.class)
+    private Set<Helpline> helplines;
 
-    public Hotline() {
+    public Helpline() {
     }
 
     public long getId() {

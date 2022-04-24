@@ -313,6 +313,28 @@ header.active .close {
     opacity: 0;
 }
 
+/* REGISTRATION FORM STYLES */
+
+.register-form {
+    border: 2px solid #212121;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.control-label,
+.form-label {
+    font-family: var(--ff-mono);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.error-message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+
 
 
 /* SIGN UP PAGE FILTER BUTTONS */
@@ -411,7 +433,7 @@ header.active .close {
 
 
 
-/* RESOURCES/HOTLINES TABLE */
+/* ACCOUNT RESOURCE TABLE */
 
 .resource-table {
     display: inline-flex;
@@ -453,15 +475,6 @@ td {
     border-bottom: solid 1px #212121;
 }
 
-
-/* LANDING PAGE STEPS */
-
-/*#steps {*/
-/*    border: 2px solid #212121;*/
-/*    border-radius: 20px;*/
-/*    background-color: #AAC347;*/
-/*    padding: 5%;*/
-/*}*/
 
 /* HOTLINES ACCORDION */
 
