@@ -18,6 +18,7 @@
     --fs-500: 2.7rem;
     --fs-400: 1.5rem;
     --fs-300: 1.1rem;
+    --fs-200: 0.9rem;
 
 
     /* font-families */
@@ -111,13 +112,14 @@ picture {
 
 /* MAKE FORMS & BUTTONS UNIFORM */
 
+table,
 input,
 textarea,
 select {
     font: inherit;
     border: 2px solid #212121;
     border-radius: 20px;
-    padding: 3%;
+    padding: 10px;
 }
 
 
@@ -205,6 +207,7 @@ li {
 .fs-500 { font-size: var(--fs-500); }
 .fs-400 { font-size: var(--fs-400); }
 .fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
 
 
 .fs-800,
@@ -494,9 +497,19 @@ input#a3 {
     position: relative;
 }
 
-/* IMAGES (ABOUT PAGE) */
+/* TABLE SORT */
 
-.about-image {
-    background-blend-mode: lighten;
-    z-index: 0;
+#myInput {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#all-resources-table th {
+    text-align: left;
+    padding: 3%;
+    border-bottom: 2px solid #212121;
+    font-size: 1.1rem;
+    cursor: pointer;
+
 }
