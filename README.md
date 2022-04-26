@@ -22,6 +22,9 @@ ___________
 
 ## Daily Progress
 
+**April 65th (done!)**
+- readme updated
+
 **April 25th (99-100% done!)**
 - connected helplines from helplines database to table in html
 - added save resource function to account page
