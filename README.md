@@ -105,6 +105,7 @@ Create an account feature which allows users to:
 The majority of challenges I had with this project were with backend technologies. Some specific challenges included:
 
 Connecting the data: How to map user selections to connect users with the right resources
+
 App account set up: Using Thymeleaf & the controller class to cycle through user selections on one HTML page
 
 
