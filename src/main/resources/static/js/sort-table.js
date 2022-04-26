@@ -3,7 +3,7 @@
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("all-resources-table");
+    table = document.getElementById("sort-table");
     tr = table.getElementsByTagName("tr");
 
     // Loop through all table rows, and hide those who don't match the search query
@@ -22,7 +22,7 @@
 
  function sortTable(n) {
      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-     table = document.getElementById("all-resources-table");
+     table = document.getElementById("sort-table");
      switching = true;
      // Set the sorting direction to ascending:
      dir = "asc";

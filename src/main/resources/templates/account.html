@@ -35,59 +35,75 @@
 </header>
 
 <!-- INTRO -->
-<div class="container">
-    <div>
         <div class="row">
-            <div class="col-7">
-                    <h1 class="fs-600 ff-sans-normal text-black">My Account</h1>
-                    <h2 class="fs-500 ff-sans-normal text-black"><br>Save and access your resources all from right here.<br><br></h2>
-                <div class="col-sm-4">
-                <div id="preferences"><a href="/account_setup/step_1" class="large-button fs-400 bg-purple">add | update preferences</a></div>
-                </div>
+            <div class="col-8">
+                    <h1 class="fs-500 ff-sans-normal">My Account</h1>
+                    <h2 class="fs-300 ff-mono"><br>Preferences | Settings<br><br></h2>
             </div>
-            <div class="col-md">
-                <p class="fs-400 ff-mono text-black"><br>User Preferences | Details<br><br></p>
+            <div class="col-4">
+                <div id="preferences-button"><a href="/account_setup/step_1" class="large-button fs-400 bg-purple" style="float:right">click to add & update preferences</a></div>
             </div>
         </div>
-    </div>
+
+
+<!-- USERS SAVED RESOURCE LIST -->
+<div th:if="${not saved_resources.isEmpty()}" class="container-flex">
+
+    <table id="sort-table">
+
+        <tr>
+            <th onclick="sortTable(0)" class="col-sm-3">Organization <span class="fs-400">🡦</span></th>
+            <th onclick="sortTable(1)" class="col-sm-3">Programs <span class="fs-400">🡦</span></th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+
+        <tr th:each="resource : ${saved_resources}" >
+            <td style="font-weight: bolder" th:text="${resource.name}"></td>
+            <td th:text="${resource.programs}"></td>
+            <td th:text="${resource.description}"></td>
+            <td>
+                <a th:href="@{/deleteResource/{id}(id=${resource.id})}" method="post" class="btn btn-default mb-3 bg-purple">REMOVE RESOURCE</a>
+            </td>
+        </tr>
+
+    </table>
+
 </div>
 
+<!--RESOURCE LIST-->
+<div th:if="${not resources.isEmpty()}" class="container-flex">
 
-<!-- RESOURCE LIST -->
-<div class="container-flex">
-<section class="table-section">
-    <div class="tbl-header">
-        <table class="resource-table">
-            <thead>
-            <tr>
-<!--                <th>Name</th>-->
-<!--                <th>Description</th>-->
-<!--                <th>Save Resource</th>-->
-            </tr>
-            </thead>
-        </table>
-    </div>
-    <div class="tbl-content">
-        <table>
-            <tbody>
-            <tr th:each="resource : ${resources}">
-                <td style="font-weight: bolder" th:text="${name}"></td>
-                <td th:text="${resource.description}"></td>
-                <!--/*@thymesVar id="programs" type=""*/-->
-                <td th:text="${resource.programs}"></td>
-                <td><a th:action="@{/addResourceToList/{id}(id=${resource.id})}" method="post" class="large-button fs-400" style="float: right">save this resource</a></td>
+    <table id="sort-table">
 
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
+        <tr>
+            <th onclick="sortTable(0)" class="col-sm-3">Organization <span class="fs-400">🡦</span></th>
+            <th onclick="sortTable(1)" class="col-sm-3">Programs <span class="fs-400">🡦</span></th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+
+        <tr th:each="resource : ${resources}" >
+            <td style="font-weight: bolder" th:text="${resource.name}"></td>
+            <td th:text="${resource.programs}"></td>
+            <td th:text="${resource.description}"></td>
+            <td>
+                <form method="post" th:action="@{/saveResourceToUser/{id}(id=${resource.id})}">
+                    <button class="btn btn-default mb-3 bg-purple">SAVE RESOURCE</button>
+                </form>
+            </td>
+        </tr>
+
+    </table>
+
 </div>
+
 
 
 <!-- JAVASCRIPT -->
 <script src="js/script.js"></script>
-<script src="js/resource_table.js"></script>
+<script src="js/sort_table.js"></script>
+
 <!-- BOOTSTRAP JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

@@ -4,9 +4,7 @@ import java.util.List;
 
 public interface HelplineService {
 
-    List<Helpline> getAllHelplineLists();
-    void saveHelpline(Helpline helpline);
+    List<Helpline> getAllHelplines();
     Helpline getHelplineById(long id);
-    void deleteHelplineById(long id);
 
 }

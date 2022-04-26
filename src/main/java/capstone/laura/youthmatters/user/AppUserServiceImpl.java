@@ -1,5 +1,6 @@
 package capstone.laura.youthmatters.user;
 
+import capstone.laura.youthmatters.youth.resources.models.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,14 @@ public class AppUserServiceImpl implements AppUserService {
     @Override
     public AppUser findUserByEmail(String email) {
         return appUserRepository.findUserByEmail(email);
+    }
+
+    @Override
+    public void saveResourceToUser(Resource resource, long id) {
+        AppUser appUser = getUserById(id);
+        // TODO: make sure resource does not already exist inside of get resources
+        appUser.getResources().add(resource);
+        saveAppUser(appUser);
     }
 
 }

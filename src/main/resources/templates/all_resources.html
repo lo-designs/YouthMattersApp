@@ -19,9 +19,11 @@
 <body>
 <!-- NAVIGATION -->
 <header class="header">
-    <div class="container grid"><a class="logo" href="/"><b>You</b>th|<b>Matter</b>s.</a></div>
-    <div class="menu" onclick="toggle()">menu</div>
-    <div class="close" onclick="toggle()">close</div>
+    <div class="header-bg">
+        <div class="container grid"><a class="logo" href="/"><b>You</b>th|<b>Matter</b>s.</a></div>
+        <div class="menu" onclick="toggle()">menu</div>
+        <div class="close" onclick="toggle()">close</div>
+    </div>
 
     <div class="nav bg-green">
         <ul class="nav-links">
@@ -38,12 +40,12 @@
 <div class="container-flex">
     <div>
         <h1>Resource List</h1>
-            <a th:href="@{/showNewResourceForm}" class="btn btn-default mb-3 bg-green"> ADD NEW RESOURCE </a>
+            <button class="bg-green fs-300"><a th:href="@{/showNewResourceForm}"> ADD NEW RESOURCE </a></button>
     </div>
 
-    <table id="all-resources-table" class="table-responsive">
+    <table id="sort-table" class="table-responsive">
 
-        <tr class="bg-teal">
+        <tr>
             <th onclick="sortTable(0)" class="col-sm-3">Organization <span class="fs-400">🡦</span></th>
             <th onclick="sortTable(1)" class="col-sm-3">Programs <span class="fs-400">🡦</span></th>
             <th>Description</th>
@@ -66,7 +68,7 @@
 <!-- JAVASCRIPT -->
 <script src="js/script.js"></script>
 <script src="js/sort-table.js"></script>
-<!--<script src="js/resource_table.js"></script>-->
+
 <!-- BOOTSTRAP JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

@@ -11,6 +11,7 @@ public class Helpline {
     private long id;
     private String name;
     private String description;
+    private String programs;
     private String hours;
     @ManyToMany(targetEntity = Helpline.class)
     private Set<Helpline> helplines;
@@ -40,6 +41,22 @@ public class Helpline {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPrograms() {
+        return programs;
+    }
+
+    public void setPrograms(String programs) {
+        this.programs = programs;
+    }
+
+    public Set<Helpline> getHelplines() {
+        return helplines;
+    }
+
+    public void setHelplines(Set<Helpline> helplines) {
+        this.helplines = helplines;
     }
 
     public String getHours() {

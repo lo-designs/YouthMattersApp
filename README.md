@@ -22,8 +22,12 @@ ___________
 
 ## Daily Progress
 
+**April 25th (99-100% done!)**
+- connected helplines from helplines database to table in html
+- added save resource function to account page
+
 **April 24th (95% done)**
-- added sorting to resource table (by name and program)
+- added sorting to resource table (by name and program) with javascript
 - finished testing
 
 **April 22 (~90% done)**

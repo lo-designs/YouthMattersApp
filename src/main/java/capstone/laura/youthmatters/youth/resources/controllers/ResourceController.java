@@ -1,5 +1,7 @@
 package capstone.laura.youthmatters.youth.resources.controllers;
 
+import capstone.laura.youthmatters.user.AppUser;
+import capstone.laura.youthmatters.user.AppUserService;
 import capstone.laura.youthmatters.youth.resources.services.ResourceService;
 import capstone.laura.youthmatters.youth.resources.models.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
+import java.security.Principal;
 
 
 @Controller
@@ -19,10 +22,12 @@ public class ResourceController {
 
     // CONTROLLER FOR ADMIN TO ADD, UPDATE, AND DELETE RESOURCES
     private ResourceService resourceService;
+    private AppUserService appUserService;
 
     @Autowired
-    public ResourceController(ResourceService resourceService) {
+    public ResourceController(ResourceService resourceService, AppUserService appUserService) {
         this.resourceService = resourceService;
+        this.appUserService = appUserService;
     }
 
     // SHOW LIST OF RESOURCES
@@ -69,4 +74,14 @@ public class ResourceController {
        this.resourceService.deleteResourceById(id);
        return "redirect:/all_resources";
    }
+
+   @PostMapping("/saveResourceToUser/{id}")
+    public String saveResourceToUser(@PathVariable(value = "id") long id, Principal principal) {
+       Resource resource = resourceService.getResourceById(id);
+       AppUser appUser = appUserService.findUserByEmail(principal.getName());
+       appUserService.saveResourceToUser(resource, appUser.getId());
+       return "redirect:/account";
+   }
+
+
 }

@@ -57,11 +57,6 @@ public class AppUserController {
         return "get_started";
     }
 
-    @GetMapping("/helplines")
-    public String helplines() {
-        return "helplines";
-    }
-
     @GetMapping("/login")
     public String login() {
         return "login";
@@ -74,10 +69,6 @@ public class AppUserController {
         return "redirect:/";
     }
 
-//    @GetMapping("/resources")
-//    public String resources() {
-//        return "resources";
-//    }
 
     @GetMapping("/account")
     public String account(Model model, Principal principal) {
@@ -86,6 +77,7 @@ public class AppUserController {
         System.out.println(tagIds);
     List<Resource> resources = resourceService.getResourcesByTags(tagIds);
         System.out.println(resources);
+        model.addAttribute("saved_resources", appUser.getResources());
         model.addAttribute("resources", resources);
         return "account";
     }

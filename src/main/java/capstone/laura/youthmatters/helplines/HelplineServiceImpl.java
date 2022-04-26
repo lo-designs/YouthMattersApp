@@ -17,14 +17,11 @@ public class HelplineServiceImpl implements HelplineService {
     }
 
     @Override
-    public List<Helpline> getAllHelplineLists() {
+    public List<Helpline> getAllHelplines() {
         return helplineRepository.findAll();
     }
 
-    @Override
-    public void saveHelpline(Helpline helpline) {
-        helplineRepository.save(helpline);
-    }
+
 
     @Override
     public Helpline getHelplineById(long id) {
@@ -38,8 +35,4 @@ public class HelplineServiceImpl implements HelplineService {
         return helpline;
     }
 
-    @Override
-    public void deleteHelplineById(long id) {
-        helplineRepository.deleteById(id);
-    }
 }

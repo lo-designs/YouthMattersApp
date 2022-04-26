@@ -87,18 +87,23 @@ body {
     color: hsl( var(--clr-black) );
 }
 
-body::-webkit-scrollbar {
-    width: 1rem;
+/* CUSTOM SCROLLBAR */
+
+body::-webkit-scrollbar,
+table::-webkit-scrollbar {
+    width: 0.75rem;
 }
 
-body::-webkit-scrollbar-track {
-    background: #212121;
+body::-webkit-scrollbar-track,
+table::-webkit-scrollbar-track {
+    border-left: 1px solid #212121;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+table::-webkit-scrollbar-thumb {
     background: #AAC347;
-    border: 2px solid #212121;
-    border-radius: 15px;
+    border: 1px solid #212121;
+    border-radius: 25px;
 }
 
 /* MAKE PICS EASY TO WORK WITH */
@@ -112,14 +117,22 @@ picture {
 
 /* MAKE FORMS & BUTTONS UNIFORM */
 
-table,
+
 input,
 textarea,
 select {
-    font: inherit;
+    font-size: 1rem;
     border: 2px solid #212121;
     border-radius: 20px;
     padding: 10px;
+}
+
+button {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 2%;
+    border: 2px solid #212121;
+    border-radius: 15px;
 }
 
 
@@ -321,6 +334,7 @@ header.active .close {
     padding: 5%;
 }
 
+.login-label,
 .control-label,
 .form-label {
     font-family: var(--ff-mono);
@@ -337,43 +351,9 @@ header.active .close {
 
 
 
-/* SIGN UP PAGE FILTER BUTTONS */
-
-#select-filters {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3%;
-    margin-bottom: 3%;
-    width: 100%;
-}
-
-#select-filters__item {
-    padding: 7%;
-    border: 2px solid #212121;
-    line-height: 1em;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-#select-filters__item:hover {
-    background-color: #AAC347;
-}
-
-#select-filters__item--selected {
-    background-color: #AAC347;
-}
 
 
-/* SAVE/DELETE/ BUTTON */
 
-#update-button,
-#delete-button {
-    padding: 15%;
-}
-
-#add-button {
-    padding: 1%;
-}
 
 
 /* 3D BUTTON */
@@ -389,11 +369,11 @@ header.active .close {
     color: var(--clr-black);
     line-height: 1em;
     border: 2px solid #212121;
-    box-shadow: 12px 12px 0,
+    box-shadow: 11px 11px 0,
+                13px 13px 0,
                 14px 14px 0,
-                15px 15px 0,
-                14px 14px 0,
-                15px 15px 0;
+                13px 13px 0,
+                14px 14px 0;
     position: relative;
     z-index: 0;
 }
@@ -423,6 +403,68 @@ header.active .close {
 }
 
 
+/*!* SIGN UP PAGE FILTER BUTTONS *!*/
+/*.customSelect,*/
+/*.custom-select {*/
+/*    display: grid!important;*/
+/*    grid-template-columns: repeat(2, 1fr)!important;*/
+/*    gap: 3%;*/
+/*    margin-bottom: 3%;*/
+/*    width: 100% !important;*/
+/*}*/
+
+/*.customSelect,*/
+/*.select-filters__item {*/
+/*    width: 100% !important;*/
+/*    padding: 7%;*/
+/*    border: 2px solid #212121;*/
+/*    line-height: 1em;*/
+/*    border-radius: 20px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/* SELECTION BUTTON */
+
+.checkbox-button {
+    display: grid;
+    margin: 4px;
+    color: #212121;
+    border-radius: 25px;
+    border: 2px solid #212121;
+    overflow: hidden;
+    float: left;
+}
+
+.checkbox-button label {
+    float: left; line-height: 3.0em;
+    width: 8.0em; height: 3.0em;
+}
+
+.checkbox-button label span {
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+}
+
+.checkbox-button label input {
+    position: absolute;
+    display: none;
+    color: #fff !important;
+}
+/* button text */
+.checkbox-button label input + span {
+    color: #212121;
+}
+
+
+/* This will declare how a selected input will look giving generic properties */
+.checkbox-button input:checked + span {
+    background-color: #AAC347;
+    color: #212121;
+}
+
+
+
 /* LOGIN/SIGNUP FORM */
 
 .custom-form {
@@ -433,20 +475,15 @@ header.active .close {
 
 
 
-/* ACCOUNT RESOURCE TABLE */
+/* TABLES */
 
-.resource-table {
+
+table {
     display: inline-flex;
     width: 100%;
     table-layout: fixed;
-}
-
-.tbl-content {
-    display: inline-flex;
-    width: 100%;
-    table-layout: fixed;
-    border: 1px solid #212121;
-    height: 50vh;
+    border: 2px solid #212121;
+    height: 70vh;
     overflow-x: auto;
     border-radius: 20px;
 }
@@ -454,8 +491,8 @@ header.active .close {
 th {
     align-content: space-between;
     width: 100%;
-    /*padding: 10%;*/
-    text-align: right;
+    padding: 10px 45px;
+    text-align: left;
     font-weight: 400;
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
@@ -467,7 +504,7 @@ td {
     align-content: space-between;
     padding: 40px 45px;
     text-align: left;
-    vertical-align:middle;
+    vertical-align: middle;
     font-weight: 400;
     font-size: 1.2rem;
     color: #212121;
@@ -476,7 +513,24 @@ td {
 }
 
 
-/* HOTLINES ACCORDION */
+/* TABLE SORT */
+
+#myInput {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#sort-table th {
+    text-align: left;
+    border-bottom: 2px solid #212121;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+
+
+/* ABOUT ACCORDION */
 
 .accordion label {
     display:block;
@@ -510,19 +564,3 @@ input#a3 {
     position: relative;
 }
 
-/* TABLE SORT */
-
-#myInput {
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-#all-resources-table th {
-    text-align: left;
-    padding: 3%;
-    border-bottom: 2px solid #212121;
-    font-size: 1.1rem;
-    cursor: pointer;
-
-}
