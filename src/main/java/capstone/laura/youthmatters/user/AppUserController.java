@@ -40,7 +40,7 @@ public class AppUserController {
         this.resourceService = resourceService;
     }
 
-    // HOME/ABOUT/HOTLINES
+    // HOME/ABOUT/LOGIN
 
     @GetMapping("/")
     public String index() {
@@ -119,7 +119,7 @@ public class AppUserController {
         return "register_options";
     }
 
-    // REGISTER/SIGNUP 2: TYPES OF HELP
+    // REGISTER/SIGNUP 2: SPECIFIC NEEDS
 
     @PostMapping("/account_setup/step_2")
     public String register2(Model model, @ModelAttribute UserSelectionDto optionIds, Principal principal) {

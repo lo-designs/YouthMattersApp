@@ -38,29 +38,31 @@
     <h1 class="fs-500 ff-sans-normal text-black" th:text="${header}"></h1>
     <h2 class="fs-400 ff-mono text-black" th:text="${subheader}"></h2>
 </div>
-<!-- FILTERS -->
-<form id="form" class="customSelect" th:action="@{/{url}(url=${url})}" method="POST">
-
+    <!-- FILTERS -->
+    <div class="container">
+        <form id="form" class="customSelect" th:action="@{/{url}(url=${url})}" method="POST">
+            <div class="checkbox-button" th:each="tag, i : ${tags}">
+            <label><input th:name="'ids[' + ${i.index} + ']'" th:value="${tag.id}" type="checkbox"><span th:text="${tag.type}"></span></label>
+            </div>
+        <div>
+    </div>
+    <!-- BACK/NEXT BUTTONS -->
     <div class="container-fluid">
-    <div class="checkbox-button" th:each="tag, i : ${tags}">
-        <label><input th:name="'ids[' + ${i.index} + ']'" th:value="${tag.id}" type="checkbox"><span th:text="${tag.type}"></span></label>
+        <div class="row">
+            <button class="large-button bg-purple"><a style="float: left" href="/"> < back </a></button>
+            <button id="submit" style="float: right" class="large-button bg-purple"> next > </button>
+        </div>
     </div>
+        </form>
 
-    <div class="row">
-        <div><a style="float: left" href="/" class="large-button"> < back </a>
-            <button id="submit" style="float: right" class="large-button"> next > </button></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="js/script.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossOrigin="anonymous"></script>
     </div>
-    </div>
-
-</form>
-
-
-<!-- JAVASCRIPT -->
-<script src="js/script.js"></script>
-<!-- BOOTSTRAP JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossOrigin="anonymous"></script>
 
 </body>
 </html>

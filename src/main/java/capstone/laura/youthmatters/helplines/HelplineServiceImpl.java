@@ -21,8 +21,6 @@ public class HelplineServiceImpl implements HelplineService {
         return helplineRepository.findAll();
     }
 
-
-
     @Override
     public Helpline getHelplineById(long id) {
         Optional<Helpline> optional = helplineRepository.findById(id);

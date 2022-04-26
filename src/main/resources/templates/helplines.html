@@ -37,25 +37,25 @@
 <!-- ALL RESOURCES -->
 <div class="container-flex">
     <div>
-        <h1>Helplines</h1>
+        <h1 class="fs-500 ff-sans-normal">Helplines</h1>
+        <h2 class="fs-400">If this is an emergency, <button class="btn btn-danger bg-red">click here</button><br><br></h2>
     </div>
-
-    <table id="sort-table" class="table-responsive">
-
+    <table id="sort-table">
         <tr>
             <th onclick="sortTable(0)" class="col-sm-3">Helpline <span class="fs-400">🡦</span></th>
-            <th onclick="sortTable(1)" class="col-sm-3">Description <span class="fs-400">🡦</span></th>
+            <th onclick="sortTable(1)" class="col-sm-3">Programs <span class="fs-400">🡦</span></th>
+            <th>Description</th>
             <th>Hours</th>
         </tr>
 
         <tr th:each="helpline : ${helplines}" >
             <td style="font-weight: bolder" th:text="${helpline.name}"></td>
+            <td th:text="${helpline.programs}"></td>
             <td th:text="${helpline.description}"></td>
             <td th:text="${helpline.hours}"></td>
-
         </tr>
-
     </table>
+
 </div>
 
 

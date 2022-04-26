@@ -75,6 +75,7 @@ public class ResourceController {
        return "redirect:/all_resources";
    }
 
+   // SAVES RESOURCE TO USER ON USER ACCOUNT PAGE
    @PostMapping("/saveResourceToUser/{id}")
     public String saveResourceToUser(@PathVariable(value = "id") long id, Principal principal) {
        Resource resource = resourceService.getResourceById(id);
@@ -82,6 +83,5 @@ public class ResourceController {
        appUserService.saveResourceToUser(resource, appUser.getId());
        return "redirect:/account";
    }
-
 
 }

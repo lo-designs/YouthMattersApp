@@ -34,51 +34,31 @@
     </div>
 </header>
 
-<!-- INTRO -->
-        <div class="row">
-            <div class="col-8">
-                    <h1 class="fs-500 ff-sans-normal">My Account</h1>
-                    <h2 class="fs-300 ff-mono"><br>Preferences | Settings<br><br></h2>
-            </div>
-            <div class="col-4">
-                <div id="preferences-button"><a href="/account_setup/step_1" class="large-button fs-400 bg-purple" style="float:right">click to add & update preferences</a></div>
-            </div>
-        </div>
-
+    <!-- INTRO -->
+    <div class="container-fluid">
+            <h1 class="fs-500 ff-sans-normal">My Account</h1>
+            <h2 class="fs-300 ff-mono"><br>Preferences | Settings<br><br></h2>
+        <div id="preferences-button"><a href="/account_setup/step_1" class="btn btn-default fs-400 ff-mono mb-3 bg-purple">click to add & update preferences</a></div>
+    </div>
 
 <!-- USERS SAVED RESOURCE LIST -->
 <div th:if="${not saved_resources.isEmpty()}" class="container-flex">
-
-    <table id="sort-table">
-
-        <tr>
-            <th onclick="sortTable(0)" class="col-sm-3">Organization <span class="fs-400">🡦</span></th>
-            <th onclick="sortTable(1)" class="col-sm-3">Programs <span class="fs-400">🡦</span></th>
-            <th>Description</th>
-            <th></th>
-        </tr>
-
+    <table class="user-list-table">
         <tr th:each="resource : ${saved_resources}" >
             <td style="font-weight: bolder" th:text="${resource.name}"></td>
             <td th:text="${resource.programs}"></td>
-            <td th:text="${resource.description}"></td>
-            <td>
-                <a th:href="@{/deleteResource/{id}(id=${resource.id})}" method="post" class="btn btn-default mb-3 bg-purple">REMOVE RESOURCE</a>
-            </td>
+            <td><button class="btn btn-default fs-400 ff-mono mb-3 bg-teal">contact</button></td>
         </tr>
-
     </table>
-
 </div>
 
 <!--RESOURCE LIST-->
 <div th:if="${not resources.isEmpty()}" class="container-flex">
 
     <table id="sort-table">
-
         <tr>
-            <th onclick="sortTable(0)" class="col-sm-3">Organization <span class="fs-400">🡦</span></th>
-            <th onclick="sortTable(1)" class="col-sm-3">Programs <span class="fs-400">🡦</span></th>
+            <th onclick="sortTable(0)" class="col-sm-3">Organization <span class="fs-400"></span></th>
+            <th onclick="sortTable(1)" class="col-sm-3">Programs <span class="fs-400"></span></th>
             <th>Description</th>
             <th></th>
         </tr>

@@ -2,8 +2,6 @@ package capstone.laura.youthmatters.user;
 
 import capstone.laura.youthmatters.youth.resources.models.Resource;
 
-import java.util.List;
-
 public interface AppUserService {
 
     void saveAppUser(AppUser appUser);

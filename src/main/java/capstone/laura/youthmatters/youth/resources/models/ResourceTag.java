@@ -11,9 +11,9 @@ public class ResourceTag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    // ex: remote, 24/7, all-female, low income, lgbtqia+, etc.
+    // (ex: remote, 24/7, all-female, low income, lgbtqia+, etc.)
     private String type;
-    // ex: 1 service, 2 resource, 3 specifications, 4 preferences
+    // (ex: 1 primary needs, 2 resource type, 3 specifications, 4 identifiers, etc.)
     private String category;
 
     public ResourceTag() {
