@@ -22,7 +22,7 @@ ___________
 
 ## Daily Progress
 
-**April 65th (done!)**
+**April 26th (done!)**
 - readme updated
 
 **April 25th (99-100% done!)**
