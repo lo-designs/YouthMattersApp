@@ -7,7 +7,7 @@ Youth|Matters is an app to help adolescents/young adults find health & wellness 
 ___________
 
 ## Table of Contents
-- [Daily Progress](#daily-progress)
+
 - [User Stories](#user-stories)
 - [Features](#features)
 - [Wireframes](#wireframes)
@@ -18,43 +18,6 @@ ___________
 - [Future Implementation](#future-implementation)
 - [Acknowledgments](#acknowledgements)
 
-___________
-
-## Daily Progress
-
-**April 26th (done!)**
-- readme updated
-
-**April 25th (99-100% done!)**
-- connected helplines from helplines database to table in html
-- added save resource function to account page
-
-**April 24th (95% done)**
-- added sorting to resource table (by name and program) with javascript
-- finished testing
-
-**April 22 (~90% done)**
-- added custom queries
-- continued testing(still in progress)
-
-**April 21 (87% done)**
-- started testing and custom queries (still have to finish)
-- updated readme
-
-**April 20 (85% done)**
-- updated CRUD operations to work with the app (will be for admin purposes)
-- updated the database (resources and resource tags)
-
-**April 19 (80% done)**
-- finished implementing spring security and registration
-- created a user account that can be accessed through successful login and registration
-
-**April 18 (~70% done)**
-- updated readme file
-- added security and registration
-- added user (health) resource table
-
-[Rubrics](https://docs.google.com/document/d/1RXAwojFcXbtUFc52Fq6j6SLkMVSvB37SM3c6dQ-Ndz8/edit)
 ___________
 
 ## User Stories
