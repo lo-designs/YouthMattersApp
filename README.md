@@ -1,4 +1,4 @@
-# Youth|Matters [Capstone]
+# Youth|Matters 
 
 ## Health & wellness app for adolescents/young adults.
 
@@ -84,8 +84,3 @@ I have learned a lot throughout this project. One takeaway was how to better pri
 While this app can find appropriate resources based on selections the user makes, future features could include filters based on age and location.
 
 In addition to filtering through resources to find the best fit, ideally the user would also be able to save, contact, schedule appointments, and correspond with their saved resources all within the app. I would also love to do more with the design.
-
-## Acknowledgements
-
-My awesome instructor, Sang Shin, and cohort.
->Special shout-out to Luis Morales Marquez & Supamas Sirichotiyakul! 
