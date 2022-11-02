@@ -13,10 +13,6 @@ ___________
 - [Wireframes](#wireframes)
 - [Schema Diagram](#schema-diagram)
 - [Technical Architecture](#technical-architecture)
-- [Technical Challenges](#technical-challenges)
-- [Learning Experience](#what-i-have-learned)
-- [Future Implementation](#future-implementation)
-- [Acknowledgments](#acknowledgements)
 
 ___________
 
@@ -64,23 +60,3 @@ Create an account feature which allows users to:
 ## Technical Architecture
 
 ![App Screenshot](https://github.com/lo-designs/YouthMattersApp/blob/main/techStack.png)
-
-
-## Technical Challenges
-
-The majority of challenges I had with this project were with backend technologies. Some specific challenges included:
-
-Connecting the data: How to map user selections to connect users with the right resources
-
-App account set up: Using Thymeleaf & the controller class to cycle through user selections on one HTML page
-
-
-## What I have learned:
-
-I have learned a lot throughout this project. One takeaway was how to better prioritize my time and stay focused on the MVP (and not get hung up on minor details). Through this process I also learned how necessary (and important!) it is to ask for help when unsure of things. And how to google better.
-
-## Future Implementation:
-
-While this app can find appropriate resources based on selections the user makes, future features could include filters based on age and location.
-
-In addition to filtering through resources to find the best fit, ideally the user would also be able to save, contact, schedule appointments, and correspond with their saved resources all within the app. I would also love to do more with the design.
